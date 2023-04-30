@@ -1,4 +1,4 @@
-<?php 
+<? 
 
     require 'db.php';
     require 'fun.php';
@@ -59,9 +59,9 @@
             unset($_SESSION['uph']);
             unset($_SESSION['upm']);
             unset($_SESSION['ups']);
-            setcookie('uph', '', time());
-            setcookie('upm', '', time());
-            setcookie('ups', '', time());
+            setcookie('uph', '', time(), '/');
+            setcookie('upm', '', time(), '/');
+            setcookie('ups', '', time(), '/');
         }
         
     }
