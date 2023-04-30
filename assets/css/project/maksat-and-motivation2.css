@@ -1,0 +1,100 @@
+
+
+
+
+
+
+
+
+
+
+/*  */
+.itemc_info{
+   min-height: 600px;
+}
+.itemc_info_c{
+   padding-top: 140px;
+}
+@media (max-width: 500px) {
+   .itemc_info_c{
+      padding-top: 80px;
+      text-align: center;
+   }
+}
+
+
+
+.cr4{
+   background: var(--cm1);
+}
+.cr4_c{
+   align-items: stretch;
+}
+.cr4_ci{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+@media (max-width: 500px) {
+   .cr4_ci{
+      margin-bottom: 20px !important;
+   }
+   .cr4_ci:last-child{
+      margin-bottom: 0 !important;
+   }
+}
+.cr4_cic{
+   margin-top: 0;
+   width: calc(100% - 64px - 15px);
+}
+
+
+
+
+/*  */
+.iprice{
+   margin-top: 40px;
+}
+.iprice_cin .head_c{
+   text-align: center;
+   padding-top: 0;
+}
+@media (max-width: 500px) {
+   .iprice_cin .head_c{
+      padding-top: 10px;
+      padding-bottom: 0;
+   }
+}
+
+
+
+.uty1{
+   position: relative;
+   width: 100%;
+   margin-top: 30px;
+}
+.uty1 p{
+   margin-top: 30px;
+   font-size: 20px;
+   font-weight: 500;
+}
+.uty1 li{
+   margin-top: 15px;
+}
+
+
+
+.container, .utm1_v{
+   position: relative;
+   width: 100%;
+}
+.container iframe{
+   width: 100%;
+   min-height: 480px;
+}
+
+@media (max-width: 500px) {
+   .container iframe{
+      min-height: 220px;
+   }
+}

@@ -1,0 +1,136 @@
+/*  */
+.app{}
+@media (max-width: 500px) {
+	.app{
+		padding: 0;
+	}
+}
+
+
+
+
+/*  */
+.u_sign{
+	position: relative;
+	width: 100%;
+	min-height: 600px;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.usign_c{
+	position: relative;
+	width: 100%;
+	max-width: 500px;
+	margin: auto;
+	transition: .3s;
+}
+@media (max-width: 500px) {
+	.usign_c{}
+}
+
+.usign_img{
+	position: relative;
+	width: 100%;
+	display:  flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.usign_head{
+	position: relative;
+	width: 100%;
+	margin-top: 30px;
+	text-align: center;
+}
+.usign_h{}
+.usign_p{
+	margin-top: 20px;
+	font-size: 18px;
+	line-height: 26px;
+}
+
+
+
+
+/*  */
+.form_im_ii{
+	position: relative;
+	width: calc(100% - 30px);
+	margin: auto;
+	margin-bottom: 20px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: 1px solid var(--gr3);
+}
+.form_im_ii div{
+	position: relative;
+	width: calc(50% - 20px);
+	height: 44px;
+	margin-bottom: -1px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	border-bottom: 1px solid var(--gr3);
+	font-size: 16px;
+	color: var(--bl8);
+}
+div.form_im_ii_act{
+	color: var(--cl);
+	border-color: var(--cl);
+}
+@media (max-width: 360px) {
+	.form_im_ii div{width:50%}
+}
+
+
+
+/*  */
+.form_im_ml:last-child{
+	margin-bottom: 20px;
+}
+
+
+
+
+.usign_f{
+	position: relative;
+	width: 100%;
+}
+.usign_ex{
+	position: relative;
+	width: 100%;
+	margin-bottom: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: var(--red);
+}
+.usign_exi{
+	position: relative;
+	width: 54px;
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	font-size: 32px;
+	margin-right: 15px;
+}
+
+
+.usign_cn{
+	position: relative;
+	width: 100%;
+	margin-top: 40px;
+}
+.si_blc_b{
+	position: relative;
+	width: 100%;
+	margin-top: 15px;
+}
+
+
+/*  */
+.si_blc_bn{}
