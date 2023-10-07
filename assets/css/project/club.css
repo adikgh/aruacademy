@@ -1,0 +1,133 @@
+/* Переменный */
+:root {
+	/* color #1 */
+	--cl: #604C91;
+	--cl1: rgba(96,76,145,.1);
+	--cl2: rgba(96,76,145,.2);
+	--cl3: rgba(96,76,145,.3);
+	--cl4: rgba(96,76,145,.4);
+	--cl5: rgba(96,76,145,.5);
+	--cl6: rgba(96,76,145,.6);
+	--cl7: rgba(96,76,145,.7);
+	--cl8: rgba(96,76,145,.8);
+	--cl9: rgba(96,76,145,.9);
+}
+
+
+
+
+
+
+
+
+
+/*  */
+.club_bl1{
+   position: relative;
+   width: 100%;
+}
+.club_bl1c{
+   position: relative;
+   width: 100%;
+   padding-top: 120px;
+   min-height: 100vh;
+}
+
+.club_bl1_mn{
+   position: relative;
+   width: 100%;
+   margin-top: 45px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+
+   font-weight: 800;
+   font-size: 60px;
+   line-height: 72px;
+}
+.club_bl1t{
+   position: relative;
+   width: 100%;
+}
+
+
+/* .itemci_b{
+   position: relative;
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+} */
+
+
+
+
+.itemci_h{
+   font-size: 38px;
+   line-height: 48px;
+   margin-top: 0;
+}
+@media (max-width: 425px) {
+   .itemci_h{
+      font-size: 32px;
+      line-height: 42px;
+   }
+}
+
+
+
+
+/*  */
+.cr2{
+   margin-top: 40px;
+}
+.cr2_ci{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+.cr2_ci_img{
+   position: relative;
+   border-radius: 50%;
+   width: 54px;
+   height: 54px;
+   background-size: cover;
+   background-position: center center;
+   background-repeat: no-repeat;
+}
+.cr2_ci_txt{
+   position: relative;
+   width: calc(100% - 54px - 15px);
+   height: auto;
+   line-height: normal;
+   display: flex;
+   justify-content: center;
+   align-items: flex-start;
+   flex-direction: column;
+}
+.cr2_ci_txt p{
+   font-size: 20px;
+   font-weight: 600;
+}
+.cr2_ci_txt span{
+   font-size: 16px;
+   font-weight: 400;
+}
+
+
+
+
+.sbq_cip{
+   position: relative;
+   width: 100%;
+}
+.sbq_cip p{
+   font-size: 20px;
+   color: var(--red);
+}
+.sbq_cip_sole{
+   text-decoration: line-through;
+   font-size: 14px !important;
+   color: var(--bl) !important;
+}

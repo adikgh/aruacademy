@@ -21,7 +21,7 @@ $(document).ready(function() {
 			formData.append('file', $(this)[0].files[0]);
 			$.ajax({
 				type: "POST",
-				url: "/admin/course/get.php?add_item_photo",
+				url: "/education/course/admin/get.php?add_item_photo",
 				cache: false, contentType: false,
 				processData: false, dataType: 'json',
 				data: formData,
@@ -56,7 +56,7 @@ $(document).ready(function() {
 		if ($('.cours_name').attr('data-sel') != 1) mess('Форманы толтырыңыз')
 		else {
 			$.ajax({
-				url: "/admin/course/get.php?item_add",
+				url: "/education/course/admin/get.php?item_add",
 				type: "POST",
 				dataType: "html",
 				data: ({
@@ -91,7 +91,7 @@ $(document).ready(function() {
 	})
 	$('.btn_cours_edit').click(function () { 
 		$.ajax({
-			url: "/admin/course/get.php?item_edit",
+			url: "/education/course/admin/get.php?item_edit",
 			type: "POST",
 			dataType: "html",
 			data: ({
@@ -135,7 +135,7 @@ $(document).ready(function() {
 	// 
 	$('.cours_arh').click(function () {
 		$.ajax({
-			url: "/admin/course/get.php?cours_arh",
+			url: "/education/course/admin/get.php?cours_arh",
 			type: "POST",
 			dataType: "html",
 			data: ({ id: $('.cours_arh').data('id'), }),
@@ -150,7 +150,7 @@ $(document).ready(function() {
 	// 
 	$('.cours_del').click(function () {
 		$.ajax({
-			url: "/admin/course/get.php?cours_del",
+			url: "/education/course/admin/get.php?cours_del",
 			type: "POST",
 			dataType: "html",
 			data: ({ id: $('.cours_del').data('id'), }),
@@ -194,7 +194,7 @@ $(document).ready(function() {
 		if ($('.block_name').attr('data-sel') != 1) mess('Тақырыпты жазыңыз')
 		else {
 			$.ajax({
-				url: "/admin/course/get.php?block_add",
+				url: "/education/course/admin/get.php?block_add",
 				type: "POST",
 				dataType: "html",
 				data: ({
@@ -213,11 +213,133 @@ $(document).ready(function() {
 	})
 
 
+	// // add_lesson_b
+	// $('.add_lesson_b').click(function(){
+	// 	$('.lesson_add').addClass('pop_bl_act');
+	// 	$('#html').addClass('ovr_h');
+	// 	if ($(this).attr('data-block-id')) $('.btn_lesson_add').attr('data-block-id', $(this).attr('data-block-id'))
+	// })
+	// $('.lesson_add_back').click(function(){
+	// 	$('.lesson_add').removeClass('pop_bl_act');
+	// 	$('#html').removeClass('ovr_h');
+	// 	$('.btn_lesson_add').attr('data-block-id', '')
+	// })
+	// $('.lesson1_clc').click(function() { $('.lesson1_block').toggleClass('lesson1_block_act') });
+
+	// $('.btn_lesson_add').on('click', function(){
+	// 	if ($('.lesson_name').attr('data-sel') != 1) mess('Тақырыпты жазыңыз')
+	// 	else {
+	// 		$.ajax({
+	// 			url: "/admin/course/get.php?lesson_add",
+	// 			type: "POST",
+	// 			dataType: "html",
+	// 			data: ({
+	// 				name: $('.lesson_name').attr('data-val'),
+	// 				cours_id: $('.btn_lesson_add').data('cours-id'),
+	// 				block_id: $('.btn_lesson_add').data('block-id'),
+	// 				open: $('.lesson_open').attr('data-val'),
+	// 				youtube: $('.lesson_youtube').attr('data-val'),
+	// 				txt: $('.lesson_txt').val(),
+	// 			}),
+	// 			success: function(data){
+	// 				if (data == 'yes') location.reload();
+	// 				else console.log(data)
+	// 			},
+	// 			beforeSend: function(){},
+	// 			error: function(data){console.log(data)}
+	// 		})
+	// 	}
+	// })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	// menu sk
+	$('.coursls_il2m').on('click', function () {
+		if ($(this).siblings('.menu_c').hasClass('menu_act') == true) {
+			$('.coursls_il2 .menu_c').removeClass('menu_act')
+		} else {
+			$('.coursls_il2 .menu_c').removeClass('menu_act')
+			$(this).siblings('.menu_c').addClass('menu_act')
+		}
+	})
+
+	// copy_block_b
+	$('.copy_block_b').click(function(){
+		$('.block_copy').addClass('pop_bl_act')
+		$('#html').addClass('ovr_h')
+		$('.block_copy .btn_block_copy').attr('data-block', $(this).parents('.coursls_b').attr('data-id'))
+	})
+	$('.block_copy_back').click(function(){
+		$('.block_copy').removeClass('pop_bl_act');
+		$('#html').removeClass('ovr_h');
+	})
+	$('.btn_block_copy').on('click', function(){
+		$.ajax({
+			url: "/education/course/admin/get.php?block_copy",
+			type: "POST",
+			dataType: "html",
+			data: ({
+				block: $('.btn_block_copy').attr('data-block'),
+				copy_block: $('.block_cp_all').attr('data-val'),
+			}),
+			beforeSend: function(){ },
+			error: function(data){ console.log(data) },
+			success: function(data){
+				if (data == 'yes') location.reload();
+				else console.log(data)
+			},
+		})
+	})
+
+
+
+	// copy_block_b
+	$('.cours_copy_pop').click(function(){
+		$('.cours_copy').addClass('pop_bl_act')
+		$('#html').addClass('ovr_h')
+	})
+	$('.cours_copy_back').click(function(){
+		$('.cours_copy').removeClass('pop_bl_act');
+		$('#html').removeClass('ovr_h');
+	})
+	$('.btn_cours_copy').on('click', function(){
+		$.ajax({
+			url: "/education/course/admin/get.php?cours_copy",
+			type: "POST",
+			dataType: "html",
+			data: ({
+				course: $('.btn_cours_copy').attr('data-course'),
+				copy_course: $('.course_cp_all').attr('data-val'),
+			}),
+			beforeSend: function(){ },
+			error: function(data){ console.log(data) },
+			success: function(data){
+				if (data == 'yes') location.reload();
+				else console.log(data)
+			},
+		})
+	})
+
+
+
+
+
 	// add_lesson_b
 	$('.add_lesson_b').click(function(){
 		$('.lesson_add').addClass('pop_bl_act');
 		$('#html').addClass('ovr_h');
-		if ($(this).attr('data-block-id')) $('.btn_lesson_add').attr('data-block-id', $(this).attr('data-block-id'))
+		if ($(this).attr('data-id')) $('.btn_lesson_add').attr('data-block-id', $(this).attr('data-id'))
 	})
 	$('.lesson_add_back').click(function(){
 		$('.lesson_add').removeClass('pop_bl_act');
@@ -227,15 +349,15 @@ $(document).ready(function() {
 	$('.lesson1_clc').click(function() { $('.lesson1_block').toggleClass('lesson1_block_act') });
 
 	$('.btn_lesson_add').on('click', function(){
-		if ($('.lesson_name').attr('data-sel') != 1) mess('Тақырыпты жазыңыз')
+		if ($('.lesson_name').attr('data-sel') != 1) mess('Атауын жазыңыз')
 		else {
 			$.ajax({
-				url: "/admin/course/get.php?lesson_add",
+				url: "/education/course/admin/get.php?lesson_add",
 				type: "POST",
 				dataType: "html",
 				data: ({
 					name: $('.lesson_name').attr('data-val'),
-					cours_id: $('.btn_lesson_add').data('cours-id'),
+					course_id: $('.btn_lesson_add').data('cours-id'),
 					block_id: $('.btn_lesson_add').data('block-id'),
 					open: $('.lesson_open').attr('data-val'),
 					youtube: $('.lesson_youtube').attr('data-val'),
@@ -250,6 +372,8 @@ $(document).ready(function() {
 			})
 		}
 	})
+	
+
 
 
 
@@ -280,7 +404,7 @@ $(document).ready(function() {
 	// 	if (n_name.attr('data-sel') != 1) mess('Форманы толтырыңыз')
 	// 	else {
 	// 		$.ajax({
-	// 			url: "/admin/get.php?item_add",
+	// 			url: "/education/course/admin/get.php?item_add",
 	// 			type: "POST",
 	// 			dataType: "html",
 	// 			data: ({

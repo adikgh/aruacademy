@@ -1,0 +1,97 @@
+/*  */
+
+
+
+/*  */
+.cours{
+	position: relative;
+	width: 100%;
+   padding-top: 160px;
+}
+.cours_t{
+   position: relative;
+   width: 100%;
+}
+
+
+.cours_tm{
+   position: relative;
+   width: 100%;
+   margin-top: 30px;
+   height: 54px;
+}
+.cours_tm::after{
+   content: '';
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   width: 100%;
+   height: 2px;
+   border-radius: 2px;
+   background: var(--gr5);
+}
+
+
+.cours_tm_i{
+   position: relative;
+   display: inline-flex;
+   width: auto;
+   height: 100%;
+   margin-right: 45px;
+   align-items: center;
+   font-size: 16px;
+   font-weight: 500;
+}
+.cours_tm_act{
+   font-weight: 600;
+   color: var(--cm);
+}
+.cours_tm_act::after{
+   content: '';
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   width: 100%;
+   height: 2px;
+   border-radius: 2px;
+   background: var(--cm);
+}
+@media(max-width:480px){.cours_tm_i{margin-right:40px}}
+@media(max-width:425px){.cours_tm_i{margin-right:30px}}
+@media(max-width:375px){.cours_tm_i{margin-right:20px}}
+
+
+
+
+.swiper_catalog .swiper-button-next{
+   margin: 0;
+   padding: 0;
+   opacity: 1;
+   visibility: visible;
+   width: 104px;
+   padding-left: 30px;
+   height: 54px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   color: var(--cl);
+   background: var(--tr);
+	background: -moz-linear-gradient(90deg, var(--trw) 0%, var(--bag) 50%);
+	background: -webkit-linear-gradient(90deg, var(--trw) 0%, var(--bag) 50%);
+   background: linear-gradient(90deg, var(--trw) 0%, var(--bag) 50%);
+   right: -30px;
+   top: 0;
+   transition: var(--tm);
+}
+.swiper_catalog .swiper-button-disabled, .swiper_catalog .swiper-button-prev{opacity:0;visibility:hidden}
+.swiper_catalog .swiper-button-next::after, .swiper_catalog .swiper-button-prev::after{display:none}
+@media(max-width:480px){.swiper_catalog .swiper-button-next{right:-40px}}
+@media(max-width:425px){.swiper_catalog .swiper-button-next{right:-30px}}
+@media(max-width:375px){.swiper_catalog .swiper-button-next{right:-20px;width:84px}}
+@media(max-width:320px){.swiper_catalog .swiper-button-next{right:-15px}}
+
+
+
+
+
+.cours .bq3_c{padding-top:40px}

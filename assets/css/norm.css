@@ -4,10 +4,14 @@
 /* Переменный */
 :root {
 	--bag: #f9f9f9;
+	--bag2: #fff;
+	--bag_sec: #F4F5F6;
+	--bag_tir: #CDCDD0;
+	
+	/*  */
 	--whatsapp: #25D366;
 	--wel: #F3F2C9;
 	--bronze: #CD7F32;
-	--silver: #C0C0C0;
 	--gold: #d4af37;
 	--red: #B90000;
 	--red1: rgba(185,0,0,.1);
@@ -283,7 +287,7 @@ button, input, textarea, select{
 	z-index: 11;
 }
 @media(max-width:500px){.bl_c{padding:0 30px}}
-@media(max-width:360px){.bl_c{padding:0 20px}}
+@media(max-width:390px){.bl_c{padding:0 20px}}
 
 
 
@@ -379,6 +383,14 @@ button, input, textarea, select{
 .btn i{font-size:15px}
 .btn i:first-child{margin-right:10px}
 .btn i:last-child{margin-left:10px}
+.btn2{
+	padding: 14px 24px;
+	min-height: 44px;
+	min-width: 44px;
+	border-radius: 10px;
+	line-height: 16px;
+}
+
 
 .btn_cl{ /* btn style 2 */
 	background: var(--tr);
@@ -512,6 +524,8 @@ button, input, textarea, select{
 	border-radius: 12px;
 }
 .btn_dd2 {
+	min-height: 44px;
+	min-width: 44px;
 	height: 44px;
 	width: 44px;
 	padding: 0;

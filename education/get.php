@@ -1,4 +1,4 @@
-<?php include "../config/core_edu.php";
+<? include "../config/core_edu.php";
 
 	// sign in phone
 	if(isset($_GET['phone'])) {

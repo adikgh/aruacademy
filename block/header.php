@@ -10,4 +10,5 @@
 <body id="body" class="body">
 
 	<? // if ($site_set['preloader'] == true) include "preloader.php"; ?>
+	
 	<? include "menu.php"; ?>

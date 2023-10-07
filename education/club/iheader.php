@@ -5,10 +5,10 @@
    
    <div class="uitemc_u">
       <div class="uitemc_um">
-         <a class="uitemc_umi <?=($pod_menu_name=='info'?'uitemc_umi_act':'')?>" href="/club/">
+         <!-- <a class="uitemc_umi <?=($pod_menu_name=='info'?'uitemc_umi_act':'')?>" href="/club/">
             <div><i class="fal fa-info-circle"></i></div>
             <span>Мәлімет</span>
-         </a>
+         </a> -->
          <a class="uitemc_umi <?=($pod_menu_name=='plan'?'uitemc_umi_act':'')?>" href="/education/club/">
             <div><i class="fal fa-clipboard-list-check"></i></div>
             <span>Жоспар</span>

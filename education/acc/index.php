@@ -1,4 +1,4 @@
-<?php include "../../config/core_edu.php";
+<? include "../../config/core_edu.php";
 
 	// Қолданушыны тексеру
 	if (!$user_id) header('location: /education/');
@@ -6,6 +6,9 @@
 	// Сайттың баптаулары
 	$menu_name = 'acc';
 	$site_set['utop_nm'] = 'Жеке деректер';
+	$site_set['utop_bk'] = 'my/list.php';
+	if (isset($_GET['back'])) $site_set['utop_bk'] = $_GET['back'];
+
 	$site_set['um_menu'] = true;
 	$css = ['education/acc'];
 	// $js = [];
@@ -40,22 +43,33 @@
 						<div class="menu_cin"><i class="fal fa-user-circle"></i></div>
 						<div class="menu_cih">Жеке деректер</div>
 					</div>
-					<a class="up_li" href="/education/chat/">
+					<!-- <a class="up_li" href="/education/chat/">
 						<div class="menu_cin"><i class="fal fa-comments-alt"></i></div>
 						<div class="menu_cih">Куратормен чат
 							<? if (fun::chat_view_sum2($user_id) != 0): ?>
 								<span><?=fun::chat_view_sum2($user_id)?></span>
 							<? endif ?>
 						</div>
-					</a>
+					</a> -->
 					<!-- <a class="up_li" href="/education/homework/">
 						<div class="menu_cin"><i class="fal fa-pennant"></i></div>
 						<div class="menu_cih">Үй жұмыстарым</div>
 					</a> -->
-					<a class="up_li" href="/education/reviews/">
+					<!-- <a class="up_li" href="/education/reviews/">
 						<div class="menu_cin"><i class="fal fa-comment-alt-lines"></i></div>
 						<div class="menu_cih">Пікірлерім</div>
-					</a>
+					</a> -->
+
+					<? if (!$user_right): ?>
+
+					<? else: ?>
+						<a class="up_li" href="/education/users/">
+							<div class="menu_cin"><i class="fal fa-users"></i></div>
+							<div class="menu_cih">Қолданушылар</div>
+						</a>
+						<!-- <a class="cmenu_i <?=($menu_name=='users'?'cmenu_i_act':'')?>" href="/education/users/">Қолданушылар</a> -->
+					<? endif ?>
+
 				</div>
 
 				<div class="up_lt">

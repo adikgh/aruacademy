@@ -1,4 +1,6 @@
-<?php include "../config/core.php";
+<? include "../config/core.php";
+
+   header('location: /');
 
 	// 
 	$sub_id = 1;
@@ -23,7 +25,7 @@
 	$whatsapp2 = ['77776779777', '77476267492'];
 	
 ?>
-<?php include "../block/header.php"; ?>
+<? include "../block/header.php"; ?>
 
 
 	<div class="club_bl">

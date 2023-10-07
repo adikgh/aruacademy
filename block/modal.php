@@ -32,7 +32,6 @@
 
 <!--  -->
 <? if ($site_set['cl_wh']): ?>
-	<!-- phone -->
 	<a target="_blank" href="https://wa.me/<?=$site['whatsapp']?>">
 		<div type="button" class="callback-bt">
 		   <i class="fab fa-whatsapp"></i>

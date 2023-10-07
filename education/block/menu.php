@@ -1,13 +1,17 @@
-<? if ($site_set['header'] == true): ?>
+<? if ($site_set['header']): ?>
 	<div class="header <?=($site_set['mheader']!='false'?'':'mheader_none')?>">
 		<div class="bl_c">
 			<div class="header_c">
 				<a class="logo" href="/education/"><?=$site['name']?></a>
 				<div class="header_r">
 					<div class="cmenu">
-						<a class="cmenu_i <?=($menu_name=='my'?'cmenu_i_act':'')?>" href="/education/my/">Курстар</a>
-						<a class="cmenu_i <?=($menu_name=='club'?'cmenu_i_act':'')?>" href="/education/club/">Клуб</a>
-						<a class="cmenu_i <?=($menu_name=='chat'?'cmenu_i_act':'')?>" href="/education/chat/">Чат</a>
+						<? if (!$user_right): ?> <a class="cmenu_i <?=($menu_name=='my'?'cmenu_i_act':'')?>" href="/education/my/">Менің курстарым</a>
+						<? else: ?>
+							<a class="cmenu_i <?=($menu_name=='list'?'cmenu_i_act':'')?>" href="/education/my/list.php">Курстар</a>	
+							<a class="cmenu_i <?=($menu_name=='users'?'cmenu_i_act':'')?>" href="/education/users/">Қолданушылар</a>
+						<? endif ?>
+						<!-- <a class="cmenu_i <?=($menu_name=='club'?'cmenu_i_act':'')?>" href="/education/club/">Клуб</a> -->
+						<!-- <a class="cmenu_i <?=($menu_name=='chat'?'cmenu_i_act':'')?>" href="/education/chat/">Чат</a> -->
 						<!-- <a class="cmenu_i <?=($menu_name==''?'cmenu_i_act':'')?>" href="/user/homework/">Үй жұмысы</a> -->
 						<!-- <a class="cmenu_i <?=($menu_name==''?'cmenu_i_act':'')?>" href="#"></a> -->
 					</div>
@@ -27,10 +31,10 @@
 								<div class="menu_cin"><i class="fal fa-mobile"></i></div>
 								<div class="menu_cih">Телефон номерім</div>
 							</div>
-							<a class="menu_ci" href="/education/reviews">
+							<!-- <a class="menu_ci" href="/education/reviews">
 								<div class="menu_cin"><i class="fal fa-comment"></i></div>
 								<div class="menu_cih">Менің пікірлерім</div>
-							</a>
+							</a> -->
 							<a class="menu_ci" href="https://wa.me/<?=$site['whatsapp']?>">
 								<div class="menu_cin"><i class="fal fa-comment-dots"></i></div>
 								<div class="menu_cih">Көмек (Whatsapp)</div>
@@ -47,8 +51,8 @@
 	</div>
 <? endif ?>
 
-<? if ($site_set['um_menu'] == true): ?>
-   <div class="pmenu">
+<? if ($user_right): ?>
+   <!-- <div class="pmenu">
       <div class="pmenu_c">
 			<div class="pmenu_cm">
 				<a class="pmenu_i <?=($menu_name=='my'?'pmenu_i_act':'')?>" href="/education/my">
@@ -65,7 +69,7 @@
 				</a>
 			</div>
       </div>
-   </div>
+   </div> -->
 <? endif ?>
 
 <div class="app">
@@ -78,5 +82,10 @@
 				</a>
 			<? endif ?>
 			<h4 class="uhead_c"><?=$site_set['utop_nm']?></h4>
+			<a href="/education/acc/">
+				<div class="cuser_i">
+					<div class="lazy_img" data-src="/assets/uploads/users/<?=$user['img']?>"><?=($user['img']?'':'<i class="fal fa-user"></i>')?></div>
+				</div>
+			</a>
 		</div>
 	<? endif ?>

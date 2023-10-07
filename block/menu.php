@@ -1,5 +1,5 @@
 <? if ($site_set['header']): ?>
-	<div class="header <?=($site_set['mheader']!='false'?'':'mheader_none')?>">
+	<div class="header <?=($site_set['mheader']?'mheader_none':'')?>">
 		<div class="header_c">
 
 			<a class="logo" href="/"><?=$site['name']?></a>

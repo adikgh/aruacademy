@@ -38,6 +38,7 @@ class fun {
  	}
 
 
+
 	// category
 	public static function category($id) {
 		$sql = db::query("select * from category where id = '$id'");
@@ -96,7 +97,11 @@ class fun {
 	}
 
 
-	// 
+	// block
+	public static function sblock($id) {
+		$sql = db::query("select * from c_block where id = '$id'");
+		if (mysqli_num_rows($sql)) return mysqli_fetch_array($sql); else return null;
+	}
 	public static function block($id) {
 		$sql = db::query("select * from c_block where id = '$id'");
 		if (mysqli_num_rows($sql)) return mysqli_fetch_array($sql); else return 0;
@@ -133,7 +138,10 @@ class fun {
 			return $sql_d['number'].'. '.$sql_d['name_'.$lang];
 		} else return 0;
 	}
-
+	public static function lesson_next_number($id) {
+		$sql = db::query("select * from c_lesson where block_id = '$id' order by number desc limit 1");
+		if (mysqli_num_rows($sql)) return (mysqli_fetch_array($sql))['number'] + 1; else return 1;
+	}
 
 
 
@@ -316,6 +324,27 @@ class fun {
 	public static function autor($id) {
 		$sql = db::query("select * from user_autor where id = '$id'");
 		return mysqli_fetch_array($sql);
+	}
+	
+
+
+
+
+
+
+
+
+
+	// sms
+	public static function sms_save($arr, $user_id) {
+		$id_sms = $arr['0'];
+		$status = $arr['1'];
+		$price = $arr['2'];
+
+		if ($price) $sql = db::query("INSERT INTO `user_sms`(`id_sms`, `user_id`, `price`, `status`) VALUES ('$id_sms', '$user_id', '$price', '$status')");
+		else $sql = db::query("INSERT INTO `user_sms`(`id_sms`, `user_id`, `status`) VALUES ('$id_sms', '$user_id', '$status')");
+		if ($sql) return 'yes'; else return 'none';
+		// return $id_sms;
 	}
 	
 

@@ -548,3 +548,65 @@
 	font-weight: 600;
 }
 .uhwa_lpi span, .uhwa_lpi_act span{font-size:12px;color:var(--bl)}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*  */
+.coursls_b{
+	overflow: unset;
+}
+.coursls_ilw{
+	position: relative;
+	width: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.coursls_il, .coursls_il2, .coursls_il2m{
+	position: relative;
+	width: 44px;
+	height: 44px;
+	min-width: 44px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: var(--tr);
+	font-size: 14px;
+	transition: .3s;
+	border-radius: 12px;
+}
+.coursls_il_lock{}
+.coursls_il2{}
+.coursls_il2m{
+	cursor: pointer;
+}
+.coursls_il2:hover .coursls_il2m{
+	background: var(--cl1);
+}
+
+
+.coursls_il2 .menu_c{
+	z-index: 25;
+	top: -25px;
+	right: 59px;
+}
+.coursls_il2 .menu_act{
+	opacity: 1;
+	visibility: visible;
+	top: 0px;
+}

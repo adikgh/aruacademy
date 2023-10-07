@@ -11,8 +11,8 @@
 	// if (isset($_GET['sub']) && isset($_GET['mail'])) header('location: /education/sign_up_mail.php?sub');
 
 	// masterclass
-	if ($user_id) { if (isset($_GET['subm'])) header('location: /education/cours/masterclass/?id='.$_GET['subm'].'&back=sub'); }
-	else { if (isset($_GET['subm'])) header('location: /education/sign.php/?subm='.$_GET['subm']); }
+	// if ($user_id) { if (isset($_GET['subm'])) header('location: /education/cours/masterclass/?id='.$_GET['subm'].'&back=sub'); }
+	// else { if (isset($_GET['subm'])) header('location: /education/sign.php/?subm='.$_GET['subm']); }
 
 
 	// site setting
@@ -105,17 +105,20 @@
 				<p>Егер сіз жаңа салада білім алғыңыз келсе, біздің үлкен бағдарламаларды қараңыз. Олардың көмегімен сіз дағдыларды дамыта аласыз, оларды іс жүзінде шыңдай аласыз.</p>
 			</div>
 			<div class="bq2_c">
-				<?php $cours = db::query("select * from cours where selling = 1 and arh is null and offer = 1 ORDER BY ins_dt desc limit 4"); ?>
-				<?php while($item_d = mysqli_fetch_array($cours)): ?>
-					<? $item_d = array_merge($item_d, fun::cours_info($item_d['id'])); ?>
-					<a class="bq2_ci" href="/cours/item.php?id=<?=$item_d['id']?>">
-						<div class="bq_ci_img"><div class="lazy_img" data-src="/assets/img/cours/<?=$item_d['img']?>"></div></div>
+				<? $cours = db::query("select * from cours where selling = 1 and arh is null and offer = 1 ORDER BY ins_dt desc limit 4"); ?>
+				<? while($cours_d = mysqli_fetch_array($cours)): ?>
+					<? $cours_d = array_merge($cours_d, fun::cours_info($cours_d['id'])); ?>
+					<a class="bq2_ci" href="/cours/<?=($cours_d['site']?$cours_d['site']:'item.php?id='.$cours_d['id'])?>">
+						<div class="bq_ci_img"><div class="lazy_img" data-src="/assets/uploads/course/<?=$cours_d['img']?>"></div></div>
 						<div class="bq_ci_info">
-							<div class="bq_cih"><?=$item_d['name_'.$lang]?></div>
-							<div class="bq_cif"><?=$item_d['offer_'.$lang]?></div>
+							<div class="bq_cih"><?=$cours_d['name_'.$lang]?></div>
+							<? if ($cours_d['offer_'.$lang]): ?> <div class="bq_cif"><?=$cours_d['offer_'.$lang]?></div> <? endif ?>
+						</div>
+						<div class="bq_ci_btn">
+							<div class="btn btn2 btn_cm">Толығырақ</div>
 						</div>
 					</a>
-				<?php endwhile ?>
+				<? endwhile ?>
 			</div>
 		</div>
 	</div>

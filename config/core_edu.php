@@ -4,6 +4,7 @@
     require 'fun.php';
     require 't.php';
     require 'smsc_api.php';
+    require 'var.php';
 
     class core {
         public static $user_ph = false;
@@ -25,8 +26,8 @@
             $user_ps = false;
 
             if ((isset($_SESSION['uph']) && isset($_SESSION['ups'])) || (isset($_SESSION['upm']) && isset($_SESSION['ups']))) {
-                $user_ph = $_SESSION['uph'];
-                $user_pm = $_SESSION['upm'];
+                if (isset($_SESSION['uph'])) $user_ph = $_SESSION['uph'];
+                else $user_pm = $_SESSION['upm'];
                 $user_ps = $_SESSION['ups'];
             } else if ((isset($_COOKIE['uph']) && isset($_COOKIE['ups'])) || (isset($_COOKIE['upm']) && isset($_COOKIE['ups']))) {
                 $user_ph = $_COOKIE['uph'];
@@ -69,40 +70,33 @@
     // data
     $core = new core;
     $user = core::$user_data;
-    $user_id = $user['id'];
-    $user_right = $user['right'];
-    $user_super_right = $user['super_right'];
+    $user_id = $user_right = false;
+    if ($user) {
+        $user_id = $user['id'];
+        $user_right = $user['right'];
+        $user_super_right = $user['super_right'];
+    }
 
-    // lang
-    $lang = 'kz';
-    if (isset($_GET['lang'])) if ($_GET['lang'] == 'kz' || $_GET['lang'] == 'ru') $_SESSION['lang'] = $_GET['lang'];
-    if (isset($_SESSION['lang'])) $lang = $_SESSION['lang'];
+
 
     // setting
     $site = mysqli_fetch_array(db::query("select * from `site` where id = 1"));
-    $ver = 1.881;
     $site_set = [
         'analitics' => true,
         'header' => true,
+        'mheader' => true,
         'menu' => true,
         'um_menu' => false,
+     
+        'swiper' => false,
+        'plyr' => false,
+        'aos' => false,
+        'autosize' => false,
+  
         'footer' => true,
         'footer_t' => true,
-		// 'swiper' => false,
-        // 'plyr' => false,
-        // 'aos' => false,
-	];
+        'form' => false,
+        'cl_wh' => false,
+    ];
     $scss = ['anim', 'norm', 'education/main'];
     $sjs = ['norm', 'education/main'];
-    $css = []; $js = [];
-    $code = rand(1000, 9999);
-
-    // date - time
-    $date = date("Y-m-d", time());
-    $time = date("H:m:s", time());
-    $datetime = date('Y-m-d H:i:s', time());
-
-    // url
-	$url = $url_full = $_SERVER['REQUEST_URI'];
-	$url = explode('?', $url);
-	$url = $url[0];

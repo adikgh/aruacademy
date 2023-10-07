@@ -44,14 +44,14 @@
 				<? endif ?>
 
 				<div class="footer_b">
-					<div class="footer_bl">© <?=$site['name']?>, 2022</div>
+					<div class="footer_bl">© <?=$site['name']?>, 2023</div>
 					<div class="footer_br">
 						<a href="https://gprog.kz" target="_blank" class="gprog_bl">
 							<span>#gprog-та</span>
 							<div class="gprog_heart"><i class="fas fa-heart"></i></div>
 							<span>жасалған</span>
 							<div class="gprog_ab">
-								<div class="gprog_lg"><div class="lazy_img" data-src="https://gprog.kz/assets/img/logo/logo_tr_1200.png"></div></div>
+								<div class="gprog_lg"><div class="lazy_img" data-src="https://gprog.kz/assets/img/logo/logo.png"></div></div>
 								<div class="gprog_h">G prog</div>
 								<div class="gprog_p">Бізбен өз онлайн мектебіңді аш!</div>
 							</div>

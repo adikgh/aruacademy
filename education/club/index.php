@@ -1,7 +1,8 @@
-<?php include "icore.php";
+<? include "icore.php";
 
 	// 
-	if ($buy == 0) header('location: /club/');
+	// if ($buy == 0) header('location: /club/');
+	if ($buy == 0) header('location: /');
 
 	// 
 	$item = db::query("select * from c_sub_item where sub_id = '$sub_id' order by number asc");
@@ -12,7 +13,7 @@
 	$site_set['utop_nm'] = $sub['name_'.$lang];
 	$site_set['utop_bk'] = '';
 ?>
-<?php include "../block/header.php"; ?>
+<? include "../block/header.php"; ?>
 
 	<div class="uitem">
 		<div class="bl_c">

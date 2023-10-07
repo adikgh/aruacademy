@@ -7,11 +7,11 @@
 		if (mysqli_num_rows($cours)) {
 
 			$cours = mysqli_fetch_assoc($cours);
-			$cours = array_merge($cours, fun::cours_info($cours['id']));
-			if ($cours['site'] != null) header('location: /cours/'.$cours['site']);
+			// $cours = array_merge($cours, fun::cours_info($cours['id']));
+			if ($cours['site']) header('location: /cours/'.$cours['site']);
 			
 			$category = fun::category($cours['category_id']);
-			$autor = fun::autor($cours['autor_id']);
+			// $autor = fun::autor($cours['autor_id']);
 			
 			$pack = db::query("select * from c_pack where cours_id = '$cours_id'");
 			$pl = db::query("select * from c_pack where cours_id = '$cours_id' and number = 1");
@@ -25,7 +25,7 @@
 	// site setting
 	$menu_name = 'item';
    $site_set['menu'] = 2;
-	$css = ['item'];
+	$css = ['project/item'];
 	$js = [];
 	$site_set['swiper'] = true;
 

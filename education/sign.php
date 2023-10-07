@@ -1,4 +1,4 @@
-<?php include "../config/core_edu.php";
+<? include "../config/core_edu.php";
 
 	// 
 	if ($user_id) header('location: /education/my/');

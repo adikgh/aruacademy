@@ -1,12 +1,15 @@
-<?php include "../../config/core_edu.php";
+<? include "../../config/core_edu.php";
 
 	// Қолданушыны тексеру
 	if (!$user_id) header('location: /education/');
-
+	if ($user_right) header('location: /education/my/list.php');
+	
 	// 
 	fun::buy_end_off($user_id);
 	
 	
+	$sub_buy = db::query("select * from c_sub_buy where user_id = '$user_id' and off is null");
+
 	$buy = db::query("select * from c_buy where user_id = '$user_id' and off is null ORDER BY ins_dt DESC");
 	$buy_off = db::query("select * from c_buy where user_id = '$user_id' and off = 1 ORDER BY ins_dt DESC");
 	$item = db::query("select * from c_sub_item where sub_id = '$sub_id' order by number asc");
@@ -25,25 +28,33 @@
 	<div class="ucours">
 		<div class="bl_c">
 			
-			<!-- <div class="uitemc_u">
-				<div class="uitemc_um">
-					<a class="uitemc_umi <?=($pod_menu_name=='all'?'uitemc_umi_act':'')?>" href="/user/cours/all.php">Барлығы (<?=fun::cours_sum()?>)</a>      
-					<? if (!$user_right && $user_id): ?>
-						<a class="uitemc_umi <?=($pod_menu_name=='my'?'uitemc_umi_act':'')?>" href="/user/cours/">Менің курстарым <?=(!$pod_menu_name?'('.mysqli_num_rows($buy).')':'')?></a>
-					<? endif ?>
-					<a class="uitemc_umi <?=($pod_menu_name=='club'?'uitemc_umi_act':'')?>" href="/user/sub/">Клуб <?=($pod_menu_name=='subscription'?'('.mysqli_num_rows($cours).')':'')?></a>
-					<div class="ucours_tm">
-						<a class="ucours_tmi <?=($pod_menu_name=='bookmark'?'ucours_tm_act':'')?>" href="/user/cours/bookmark.php">Сақтаулы <?=($pod_menu_name=='bookmark'?'('.mysqli_num_rows($bookmark).')':'')?></a>
+			<div class="head_c">
+				<h4>Менің курстарым</h4>
+			</div>
+
+			<div class="uc_d">
+
+				<? if (mysqli_num_rows($sub_buy)): ?>
+					<? $cours_d = fun::sub(1); ?>
+						
+					<div class="uc_di ">
+						<a class="uc_dio" href="/education/club/">
+							<div class="uc_di_img">
+								<div class="uc_di_imgc lazy_img" data-src="/assets/uploads/course/<?=$cours_d['img']?>"></div>
+							</div>
+							<div class="uc_dic">
+								<div class="uc_dih"><?=$cours_d['name_'.$lang]?></div>
+								<div class="uc_din">
+									<div class="uc_did3"></div>
+								</div>
+							</div>
+						</a>
+						<div class="btn btn_cm btn_dd uc_di_btn"><i class="fal fa-long-arrow-right"></i></div>
 					</div>
-				</div>
-			</div> -->
+				<? endif ?>
 
-			<? if (mysqli_num_rows($buy)): ?>
-				<div class="head_c">
-					<h4>Менің курстарым</h4>
-				</div>
+				<? if (mysqli_num_rows($buy)): ?>
 
-				<div class="uc_d">
 					<? while($buy_d = mysqli_fetch_array($buy)): ?>
 						<?	$cours_id = $buy_d['cours_id']; ?>
 						<? $cours_d = fun::cours($buy_d['cours_id']); ?>
@@ -87,8 +98,10 @@
 						</div>
 
 					<? endwhile ?>
-				</div>
-			<? endif ?>
+					
+				<? endif ?>
+
+			</div>
 
 
 			<? if (mysqli_num_rows($buy_off)): ?>

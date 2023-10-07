@@ -1,16 +1,14 @@
-<?php
+<?
 
 // define("SMSC_LOGIN", "bkmrktr@mail.ru");
 // define("SMSC_PASSWORD", "f702268989d39acce4c466f36eb835af1f1cf4dc");
-// define("SMSC_LOGIN", "adik.gh99");
-// define("SMSC_PASSWORD", "fb53068205f144e272d2d29f1ae4bc59fbb97362");
 // define("SMSC_LOGIN", "saiyeva.aru@mail.ru");
 // define("SMSC_PASSWORD", "97a0bd2c19e90148a8a4d94aae7c17e788b6f0f6");
 // define("SMSC_LOGIN", "sagieva_aru");
 // define("SMSC_PASSWORD", "68e3ea5e16b1aede5ce851f967f2392cbbba91c1");
 
-define("SMSC_LOGIN", "saqserik");
-define("SMSC_PASSWORD", "da0311636343f678cd5eecc15f64ed101c2408eb");
+define("SMSC_LOGIN", "adik.gh99");
+define("SMSC_PASSWORD", "fb53068205f144e272d2d29f1ae4bc59fbb97362");
 
 define("SMSC_POST", 0);					// ������������ ����� POST
 define("SMSC_HTTPS", 0);				// ������������ HTTPS ��������
