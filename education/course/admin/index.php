@@ -25,7 +25,7 @@
 
 	// Тариф деректері
 	if (mysqli_num_rows($pack_all)) {
-		if (isset($_GET['pack_id']) || $_GET['pack_id'] != '') {
+		if (isset($_GET['pack_id']) && $_GET['pack_id'] != '') {
 			$pack_id = $_GET['pack_id'];
 			$pack = db::query("select * from c_pack where id = '$pack_id'");
 			if (mysqli_num_rows($pack)) $pack_dd = mysqli_fetch_assoc($pack);
@@ -75,9 +75,11 @@
 						<div class="uhwa_lp">
 							<? $pack_all = db::query("select * from c_pack where cours_id = '$cours_id'"); ?>
 							<? while($pack_d = mysqli_fetch_assoc($pack_all)): ?>
-								<a class="uhwa_lpi <?=($pack_d['number']==1?'uhwa_lpi_act':'')?>" href="?id=<?=$cours_id?>&pack_id=<?=$pack_d['id']?>">
+								<a class="uhwa_lpi <?=($pack_id == $pack_d['id']?'uhwa_lpi_act':'')?>" href="?id=<?=$cours_id?>&pack_id=<?=$pack_d['id']?>">
 									<span>Пакет:</span>
 									<p><?=$pack_d['name_'.$lang]?></p>
+									<? if ($pack_d['price_sole']): ?> <span class="fr_price"><?=$pack_d['price_sole']?></span>
+									<? else: ?> <span class="fr_price"><?=$pack_d['price']?></span> <? endif ?>
 								</a>
 							<? endwhile; ?>
 							<div class="ucours_tm ucours_tm_btn">
