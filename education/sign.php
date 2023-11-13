@@ -1,7 +1,7 @@
 <? include "../config/core_edu.php";
 
 	// 
-	if ($user_id) header('location: /education/my/');
+	if ($user_id) header('location: /education/');
 
 	// cours
 	if ($user_id && isset($_GET['c'])) header('location: /education/course/?id='.$_GET['c']);

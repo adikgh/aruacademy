@@ -70,12 +70,9 @@
     // data
     $core = new core;
     $user = core::$user_data;
-    $user_id = $user_right = false;
-    if ($user) {
-        $user_id = $user['id'];
-        $user_right = $user['right'];
-        $user_super_right = $user['super_right'];
-    }
+    $user_id = @$user['id'];
+    $user_right = @$user['right'];
+    $user_super_right = @$user['super_right'];
 
 
 

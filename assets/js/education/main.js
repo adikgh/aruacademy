@@ -55,6 +55,115 @@ $(document).ready(function() {
 
 
 
+	// ubdate user
+	$('.user_edit_pop').click(function(){
+		$('.user_edit_block').addClass('pop_bl_act');
+		$('#html').addClass('ovr_h');
+	})
+	$('.user_edit_back').click(function(){
+		$('.user_edit_block').removeClass('pop_bl_act');
+		$('#html').removeClass('ovr_h');
+	})
+
+	// 
+	$('.user_img_add').click(function(){ $(this).siblings('.user_img').click() })
+	$(".user_img").change(function(){
+		tfile = $(this)
+		if (window.FormData === undefined) mess('Бұл формат келмейді')
+		else {
+			var formData = new FormData();
+			formData.append('file', $(this)[0].files[0]);
+			$.ajax({
+				type: "POST",
+				url: "/education/get.php?add_user_img",
+				cache: false, contentType: false,
+				processData: false, dataType: 'json',
+				data: formData,
+				success: function(msg){
+					if (msg.error == '') {
+						tfile_n = 'url(/assets/uploads/users/' + msg.file + ')'
+						tfile.attr('data-val', msg.file)
+						tfile.siblings('.user_img_add').addClass('form_im_img2')
+						tfile.siblings('.user_img_add').css('background-image', tfile_n)
+					} else mess(msg.error)
+				},
+				beforeSend: function(){ },
+				error: function(msg){ console.log(msg) }
+			});
+		}
+	});
+
+	$('.btn_user_edit').click(function () {
+		// if ($('.user_code').val().length != 4) mess('Код бос болмауы керек!')
+		if ($('.user_name').val().length <= 2) mess('Атыңызды толтырыңыз')
+		else {
+			$.ajax({
+				url: "/education/get.php?user_edit",
+				type: "POST",
+				dataType: "html",
+				data: ({
+					name: $('.user_name').attr('data-val'), surname: $('.user_surname').attr('data-val'),
+					age: $('.user_age').attr('data-val'), img: $('.user_img').attr('data-val'),
+					code: $('.user_code').attr('data-val')
+				}),
+				success: function(data){
+					if (data == 'yes') {
+						mess('Cәтті сақталды!')
+						$('.user_edit_block').removeClass('pop_bl_act');
+						setTimeout(function() { location.reload(); }, 500);
+					}
+					console.log(data);
+				},
+				beforeSend: function(){ },
+				error: function(data){ console.log(data) }
+			})
+		}
+	})
+
+
+
+	$('.user_name_edit_back').click(function(){
+		$('.user_name_edit_block').removeClass('pop_bl_act');
+		$('#html').removeClass('ovr_h');
+	})
+	$('.btn_user_name_edit').click(function () {
+		if ($('.ubd2_user_name').val().length <= 2) mess('Атыңызды толтырыңыз')
+		else {
+			$.ajax({
+				url: "/education/get.php?user_name_edit",
+				type: "POST",
+				dataType: "html",
+				data: ({ name: $('.ubd2_user_name').attr('data-val') }),
+				error: function(data){ console.log(data) },
+				beforeSend: function(){ },
+				success: function(data){
+					if (data == 'yes') {
+						mess('Cәтті сақталды!')
+						$('.user_name_edit_block').removeClass('pop_bl_act');
+						setTimeout(function() { location.reload(); }, 500);
+					}
+					console.log(data);
+				},
+			})
+		}
+	})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

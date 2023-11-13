@@ -23,7 +23,7 @@
 				echo 'add';
 			} else echo 'yes';
 		} else {
-			$ins_user = db::query("INSERT INTO `user`(`phone`, `password`, `ins_dt`) VALUES ('$phone', '123456', '$ins_dt')");
+			$ins_user = db::query("INSERT INTO `user`(`phone`, `password`) VALUES ('$phone', '123456')");
 			if ($ins_user) {
 				$user_d = mysqli_fetch_assoc(db::query("SELECT * FROM `user` WHERE phone = '$phone'"));
 				$user_id = $user_d['id'];
@@ -53,13 +53,13 @@
             echo 'add';
 			} else echo 'yes';
 		} else {
-			$sql = db::query("INSERT INTO `user`(`mail`, `ins_dt`) VALUES ('$mail', '$ins_dt')");
+			$sql = db::query("INSERT INTO `user`(`mail`, `password`) VALUES ('$mail', '123456')");
 			if ($sql) {
 				$user_d = mysqli_fetch_assoc(db::query("SELECT * FROM `user` WHERE mail = '$mail'"));
 				$user_id = $user_d['id'];
-            db::query("INSERT INTO `c_sub_buy`(`sub_id`, `user_id`, `ins_dt`, `end_dt`) VALUES (1, '$user_id', '$ins_dt', '$end_dt')");
-            fun::send_mail($mail, $txt2);
-            echo 'add';
+				db::query("INSERT INTO `c_sub_buy`(`sub_id`, `user_id`, `ins_dt`, `end_dt`) VALUES (1, '$user_id', '$ins_dt', '$end_dt')");
+				fun::send_mail($mail, $txt2);
+				echo 'add';
 			}
 		}
 		exit();

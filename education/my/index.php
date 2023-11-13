@@ -141,3 +141,23 @@
 	</div>
 
 <? include "../block/footer.php"; ?>
+
+	<? if ($user['name'] == 'Қолданушы' || $user['name'] == 'USER' || $user['name'] == 'Test'): ?>
+		<div class="pop_bl user_name_edit_block pop_bl_act">
+			<div class="pop_bl_a user_name_edit_back"></div>
+			<div class="pop_bl_c">
+				<div class="head_c txt_c">
+					<h5>Есіміңізді жазыңыз</h5>
+				</div>
+				<div class="form_c">
+					<div class="form_im">
+						<input type="text" class="form_txt ubd2_user_name" placeholder="Есіміңізді жазыңыз" data-lenght="2" />
+						<i class="fal fa-text form_icon"></i>
+					</div>
+					<div class="form_im form_im_bn">
+						<div class="btn btn_user_name_edit">Сақтау</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	<? endif ?>
