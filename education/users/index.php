@@ -7,13 +7,13 @@
 	// $cours_id = 5;
 
 	// filter user all
-	if ($_GET['on'] == 1) $cours_buy_all = db::query("select * from user where `right` is null and locked is null");
-	elseif ($_GET['off'] == 1) $cours_buy_all = db::query("select * from user where `right` is null and locked is not null");
+	if (@$_GET['on'] == 1) $cours_buy_all = db::query("select * from user where `right` is null and locked is null");
+	elseif (@$_GET['off'] == 1) $cours_buy_all = db::query("select * from user where `right` is null and locked is not null");
 	else $cours_buy_all = db::query("select * from user where `right` is null");
 	$page_result = mysqli_num_rows($cours_buy_all);
 
 	// page number
-	$page = 1; if ($_GET['page'] && is_int(intval($_GET['page']))) $page = $_GET['page'];
+	$page = 1; if (@$_GET['page'] && is_int(intval($_GET['page']))) $page = $_GET['page'];
 	$page_age = 50;
 	$page_all = ceil($page_result / $page_age);
 	if ($page > $page_all) $page = $page_all;
@@ -21,8 +21,8 @@
 	$number = $page_start;
 
 	// filter cours
-	if ($_GET['on'] == 1) $users = db::query("select * from user where `right` is null and locked is null order by id desc limit $page_start, $page_age");
-	elseif ($_GET['off'] == 1) $users = db::query("select * from user where `right` is null and locked is not null order by id desc limit $page_start, $page_age");
+	if (@$_GET['on'] == 1) $users = db::query("select * from user where `right` is null and locked is null order by id desc limit $page_start, $page_age");
+	elseif (@$_GET['off'] == 1) $users = db::query("select * from user where `right` is null and locked is not null order by id desc limit $page_start, $page_age");
 	else $users = db::query("select * from user where `right` is null order by id desc limit $page_start, $page_age");
 
 	
@@ -134,7 +134,7 @@
 										</div>
 									</div>
 									<a class="uc_uiln" href="/user/admin/users/item/?id=<?=$user_d['id']?>">
-										<div class="uc_ui_icon lazy_img" data-src="/assets/img/users/<?=$user_d['logo']?>"><?=($user_d['logo']!=null?'':'<i class="fal fa-user"></i>')?></div>
+										<div class="uc_ui_icon lazy_img" data-src="/assets/img/users/<?=$user_d['img']?>"><?=($user_d['img']!=null?'':'<i class="fal fa-user"></i>')?></div>
 										<div class="uc_ui_name"><?=$user_d['name']?> <?=$user_d['surname']?></div>
 									</a>
 									<div class="uc_uin_other">

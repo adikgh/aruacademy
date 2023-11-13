@@ -11,7 +11,7 @@
 
 		$cours_id = strip_tags($_POST['cours_id']);
 		$pack_id = strip_tags($_POST['pack_id']);
-		$cours_sms_send = strip_tags($_POST['cours_sms_send']);
+		$cours_sms_send = @strip_tags($_POST['cours_sms_send']);
 		$cours_sms_send = 1;
 
 		$cours = fun::cours($cours_id);
@@ -21,7 +21,7 @@
 		$end_dt = date('Y-m-d H:i:s', strtotime("$datetime +$days day"));
 
 		$mess = "Cізге «$cours_name.» курсына доступ ашылды. \nСілтеме: https://aruacademy.kz/?c=$cours_id.";
-      $mess2 = "Cізге «$cours_name.» курсына доступ ашылды. \nСайтқа $phone нөміріңіз арқылы кіріңіз. \nСілтеме: https://aruacademy.kz/?cl=$cours_id. \nҚайырлы білім болсын!";
+      	$mess2 = "Cізге «$cours_name.» курсына доступ ашылды. \nСайтқа $phone нөміріңіз арқылы кіріңіз. \nСілтеме: https://aruacademy.kz/?cl=$cours_id. \nҚайырлы білім болсын!";
 
 		$user = db::query("SELECT * FROM `user` WHERE phone = '$phone'");
 		if (mysqli_num_rows($user) != 0) {
@@ -38,8 +38,8 @@
 				else $buy_ins = db::query("INSERT INTO `c_buy`(`cours_id`, `user_id`, `end_dt`) VALUES ('$cours_id', '$user_id', '$end_dt')");
 				
 				if ($cours_sms_send) {
-					$sms_send = list($sms_id, $sms_cnt, $cost, $balance) = send_sms($phone, $mess, 0, 0, 0, 0, false);
-					$sms_save = fun::sms_save($sms_send, $user_id);
+					$sms_send = @list($sms_id, $sms_cnt, $cost, $balance) = send_sms($phone, $mess, 0, 0, 0, 0, false);
+					$sms_save = @fun::sms_save($sms_send, $user_id);
 
 					// $send_sms = $sms_api->send_sms($phone_sms, $mess);
 					// if (get_balance() > 50) $sms_send = list($sms_id, $sms_cnt, $cost, $balance) = send_sms($phone, $mess, 0, 0, 0, 0, false);
@@ -85,7 +85,7 @@
 		$end_dt = date('Y-m-d H:i:s', strtotime("$datetime +$days day"));
 
 		$mess = "Cізге «$cours_name.» курсына доступ ашылды. \nСілтеме: https://aruacademy.kz/?cm=$cours_id&mail. \nҚайырлы білім болсын!";
-      $mess2 = "Cізге «$cours_name.» курсына доступ ашылды. \nСайтқа $mail почтаңыз арқылы кіріңіз. \nСілтеме: https://aruacademy.kz/?cml=$cours_id&mail. \nҚайырлы білім болсын!";
+      	$mess2 = "Cізге «$cours_name.» курсына доступ ашылды. \nСайтқа $mail почтаңыз арқылы кіріңіз. \nСілтеме: https://aruacademy.kz/?cml=$cours_id&mail. \nҚайырлы білім болсын!";
 
 		$user = db::query("SELECT * FROM `user` WHERE mail = '$mail'");
 		if (mysqli_num_rows($user) != 0) {

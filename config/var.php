@@ -6,7 +6,7 @@
    if (isset($_SESSION['lang'])) $lang = $_SESSION['lang'];
 
    // 
-   $ver = 2.112;
+   $ver = 2.226;
 
    // date - time
    $date = date("Y-m-d", time());
@@ -24,8 +24,9 @@
    $site_set = [
       'analitics' => true,
       'header' => true,
-      'menu' => true,
       'mheader' => false,
+      'menu' => true,
+      'menu_mb' => true,
 
       'footer' => true,
       'footer_t' => true,
@@ -36,6 +37,11 @@
       'plyr' => false,
       'aos' => false,
       'autosize' => false,
+
+
+      'analitics' => true,
+      'mheader' => true,
+      'um_menu' => false,
    ];
    $scss = ['anim', 'norm', 'main'];
    $sjs = ['norm', 'main'];

@@ -14,7 +14,7 @@
 			<div class="uitem_q">
 
 				<!-- item header -->
-				<?php include "iheader.php"; ?>
+				<? include "iheader.php"; ?>
 
 				<div class="uitem_ql">
 					<div class="uitem_if">

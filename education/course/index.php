@@ -52,7 +52,7 @@
 	}
 			
 	// Тариф деректері
-	if (!$buy || !$pack_id) {
+	if (!$buy || !@$pack_id) {
 		if (mysqli_num_rows($pack_all)) {
 			if (isset($_GET['pack_id']) || $_GET['pack_id'] != '') {
 				$pack_id = $_GET['pack_id'];
@@ -66,17 +66,17 @@
 	}
 
 	// Курс ашылу типі
-	if ($pack_dd['open_type']) $open_type = $pack_dd['open_type'];
+	if (@$pack_dd['open_type']) $open_type = $pack_dd['open_type'];
 	else if ($cours_d['open_type']) $open_type = $cours_d['open_type'];
-	if ($pack_dd['open_start']) $open_start = $pack_dd['open_start'];
+	if (@$pack_dd['open_start']) $open_start = $pack_dd['open_start'];
 	else if ($cours_d['open_start']) $open_start = $cours_d['open_start'];
-	if ($pack_dd['open_days']) $open_days = $pack_dd['open_days'];
+	if (@$pack_dd['open_days']) $open_days = $pack_dd['open_days'];
 	else if ($cours_d['open_days']) $open_days = $cours_d['open_days'];
 
 
 	
 	// Блок деректері
-	if ($pack_id) $block = db::query("select * from c_block where pack_id = '$pack_id' order by number asc");
+	if (@$pack_id) $block = db::query("select * from c_block where pack_id = '$pack_id' order by number asc");
 	else $block = db::query("select * from c_block where cours_id = '$cours_id' order by number asc");
 
 
@@ -113,17 +113,17 @@
 						</div>
 	
 						<div class="uitemci_ckb">
-							<? if ($sub_i['view']) $precent = round(100 / ($cours_d['item'] / $sub_i['view'])); ?>
+							<? if (@$sub_i['view']) $precent = round(100 / ($cours_d['item'] / $sub_i['view'])); ?>
 							<div class="uitemci_ckb2">
 								<div class="itemci_ls">
-									<? if ($cours_d['arh']): ?> <div class="itemci_lsi itemci_lsi_arh">Курс архивте</div> <? endif ?>
-									<? if ($cours_d['item']): ?> <div class="itemci_lsi"><?=($sub_i['view']?$sub_i['view'].'/':'')?><?=$cours_d['item']?> сабақ</div> <? endif ?>
-									<? if ($cours_d['test']): ?> <div class="itemci_lsi"><?=$cours_d['test']?> тест</div> <? endif ?>
-									<? if ($cours_d['assig']): ?> <div class="itemci_lsi"><?=$cours_d['assig']?> тапсырма</div> <? endif ?>
+									<? if (@$cours_d['arh']): ?> <div class="itemci_lsi itemci_lsi_arh">Курс архивте</div> <? endif ?>
+									<? if (@$cours_d['item']): ?> <div class="itemci_lsi"><?=($sub_i['view']?$sub_i['view'].'/':'')?><?=$cours_d['item']?> сабақ</div> <? endif ?>
+									<? if (@$cours_d['test']): ?> <div class="itemci_lsi"><?=$cours_d['test']?> тест</div> <? endif ?>
+									<? if (@$cours_d['assig']): ?> <div class="itemci_lsi"><?=$cours_d['assig']?> тапсырма</div> <? endif ?>
 								</div>
-								<? if ($sub_i['view']): ?> <div class=""><?=$precent?>%</div> <? endif ?>
+								<? if (@$sub_i['view']): ?> <div class=""><?=$precent?>%</div> <? endif ?>
 							</div>
-							<? if ($sub_i['view']): ?>
+							<? if (@$sub_i['view']): ?>
 								<div class="uitemci_time_b">
 									<div class="uitemci_time_b2" style="width:<?=$precent?>%"></div>
 								</div>
@@ -155,9 +155,11 @@
 					</div>
 	
 					<!--  -->
-					<div class="">
-						
-					</div>
+					<? if (@$pack_id == 29): ?>
+						<!-- <div class="uitemci_ck">
+							<div class="morning_uitemci">Қайырлы күн! Сізге бонус сабақтарға доступ берілді! Әр ай сайын қалған сабақтарға доступ беріледі!</div>
+						</div> -->
+					<? endif ?>
 				</div>
 				
 				<div class="uc_list">	

@@ -1,4 +1,23 @@
-<? include "icore.php";
+<? include "../../config/core_edu.php";
+	
+	// Қолданушыны тексеру
+	if (!$user_id) header('location: /user/');
+
+	// Курс деректері
+	$sub_id = 1;
+	$sub = db::query("select * from c_sub where id = '$sub_id'");
+	$sub = mysqli_fetch_assoc($sub);
+
+	// Жазылымды тексеру
+	$buy = fun::sub_buy2($sub_id, $user_id);
+
+   // Сайттың баптаулары
+	$menu_name = 'club';
+	$site_set['utop_nm'] = $sub['name_'.$lang];
+	$site_set['utop_bk'] = 'sub/';
+	$site_set['um_menu'] = true;
+	$css = ['education/main', 'education/cours', 'education/uitem', 'education/club/main'];
+	$js = ['education/main'];
 
 	// 
 	// if ($buy == 0) header('location: /club/');
@@ -18,7 +37,11 @@
 	<div class="uitem">
 		<div class="bl_c">
 
-			<? include "iheader.php"; ?>
+			<div class="head_c">
+				<h3>Менің клубым</h3>
+			</div>
+
+			<? // include "iheader.php"; ?>
 
 			<!-- <div class="sb_mes1">
 				<div class="sb_mes1i">
@@ -79,7 +102,7 @@
 												<div class="uc_did2_i lazy_img" data-src="/assets/uploads/users/<?=$autor['logo']?>"></div>
 												<div class="uc_did2_c">
 													<div><?=$autor['name']?></div>
-													<? if ($autor['specialist_'.$lang]): ?>
+													<? if (@$autor['specialist_'.$lang]): ?>
 														<p><?=$autor['specialist_'.$lang]?></p>
 													<? endif ?>
 												</div>

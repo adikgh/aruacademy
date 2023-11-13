@@ -81,22 +81,8 @@
 
     // setting
     $site = mysqli_fetch_array(db::query("select * from `site` where id = 1"));
-    $site_set = [
-        'analitics' => true,
-        'header' => true,
-        'mheader' => true,
-        'menu' => true,
-        'um_menu' => false,
-     
-        'swiper' => false,
-        'plyr' => false,
-        'aos' => false,
-        'autosize' => false,
-  
-        'footer' => true,
-        'footer_t' => true,
-        'form' => false,
-        'cl_wh' => false,
-    ];
     $scss = ['anim', 'norm', 'education/main'];
     $sjs = ['norm', 'education/main'];
+
+    $site_set['cl_wh'] = false;
+    $site_set['form'] = false;

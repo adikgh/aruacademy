@@ -18,6 +18,9 @@
 <? if ($site_set['plyr']): ?> <script src="/assets/pl/plyr.polyfilled.js"></script> <? endif ?>
 <? if ($site_set['aos']): ?> <script src="/assets/pl/aos.js"></script> <? endif ?>
 <? if ($site_set['autosize']): ?> <script src="/assets/pl/autosize.min.js"></script> <? endif ?>
+   
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script> -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script> -->
 
 
 <? if ($site_set['analitics']): ?>

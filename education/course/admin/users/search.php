@@ -27,7 +27,7 @@
                      </div>
                   </div>
                   <a class="uc_uiln" href="/user/admin/users/item/?id=<?=$user_d['id']?>">
-                     <div class="uc_ui_icon lazy_img" data-src="/assets/img/users/<?=$user_d['logo']?>"><?=($user_d['logo']!=null?'':'<i class="fal fa-user"></i>')?></div>
+                     <div class="uc_ui_icon lazy_img" data-src="/assets/img/users/<?=$user_d['img']?>"><?=($user_d['img']!=null?'':'<i class="fal fa-user"></i>')?></div>
                      <div class="uc_uinu">
                         <div class="uc_ui_name"><?=$user_d['name']?> <?=$user_d['surname']?></div>
                         <div class="uc_ui_phone"><?=($user_d['phone'] != null?$user_d['phone']:$user_d['mail'])?></div>
@@ -52,7 +52,7 @@
                      <? else: ?><div class="uc_uin_date_u">Шексіз</div><? endif ?>
                   </div>
 
-                  <? if (fun::pack_sum($cours_id) > 1): ?> <div class="uc_uin_other" data-name="Пакет"><?=$pack_d['name']?></div> <? endif ?>
+                  <? if (fun::pack_sum($cours_id) > 1): ?> <div class="uc_uin_other" data-name="Пакет"><?=@$pack_d['name_kz']?></div> <? endif ?>
                </div>
                <div class="uc_uib sel_id" data-id="<?=$buy_d['id']?>">
                   <div class="uc_uibo"><i class="fal fa-ellipsis-v"></i></div>

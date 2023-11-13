@@ -2,7 +2,7 @@
 <div class="bl_mess"><div class="bl_mess_sam"></div></div>
 
 <!-- block form -->
-<?php if ($site_set['form'] == 'true'): ?>
+<?php if ($site_set['form']): ?>
    <div class="pop_bl fr">
       <div class="pop_bl_a zabr_back"></div>
       <div class="pop_bl_c">

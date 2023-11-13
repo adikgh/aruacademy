@@ -2,9 +2,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0"/> -->
 
-<title><?=$menu['title_'.$lang]?> | <?=$site['name']?></title>
-<meta name="description" content="<?=$menu['disc_'.$lang]?> <?=$site['phone_view']?>">
-<meta name="keywords" content="<?=$menu['keyw_'.$lang]?>">
+<title><?=@$menu['title_'.$lang]?> | <?=$site['name']?></title>
+<meta name="description" content="<?=@$menu['disc_'.$lang]?> <?=@$site['phone_view']?>">
+<meta name="keywords" content="<?=@$menu['keyw_'.$lang]?>">
 <meta name="theme-color" content="<?//=$site['color']?>">
 
 <!-- icon -->
@@ -15,8 +15,8 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://<?=$site['site']?>.kz" />
 <meta property="og:site_name" content="<?=$site['name']?>" />
-<meta property="og:title" content="<?=$menu['title_'.$lang]?> | <?=$site['name']?>" />
-<meta property="og:description" content="<?=$menu['disc_'.$lang]?> <?=$site['phone_view']?>" />
+<meta property="og:title" content="<?=@$menu['title_'.$lang]?> | <?=$site['name']?>" />
+<meta property="og:description" content="<?=@$menu['disc_'.$lang]?> <?=$site['phone_view']?>" />
 <meta property="og:image" content="/assets/img/logo/logo.jpg" />
 
 <!-- apple -->
@@ -26,6 +26,6 @@
 <!-- ms -->
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta http-equiv="cleartype" content="on">
-<meta name="msapplication-tooltip" content="<?=$menu['title_'.$lang]?> | <?=$site['name']?>">
+<meta name="msapplication-tooltip" content="<?=@$menu['title_'.$lang]?> | <?=$site['name']?>">
 <meta name="msapplication-TileColor" content="<?//=$site['color']?>">
 <meta name="msapplication-starturl" content="https://<?=$site['site']?>">

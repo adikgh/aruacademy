@@ -43,9 +43,10 @@
 	$menu_name = 'item';
 	$pod_menu_name = 'users';
 
+	$site_set['menu_mb'] = false;
 	$site_set['utop_nm'] = 'Оқушылар';
 	$site_set['utop_bk'] = 'course/admin/?id='.$cours_id;
-	$css = ['education/item', 'admin/user'];
+	$css = ['education/item', 'education/user2'];
 	$js = ['education/admin'];
 
 ?>
@@ -168,7 +169,7 @@
 										<? else: ?><div class="uc_uin_date_u">Шексіз</div><? endif ?>
 									</div>
 
-									<? if (fun::pack_sum($cours_id) > 1): ?> <div class="uc_uin_other" data-name="Пакет"><?=$pack_d['name']?></div> <? endif ?>
+									<? if (fun::pack_sum($cours_id) > 1): ?> <div class="uc_uin_other" data-name="Пакет"><?=@$pack_d['name_kz']?></div> <? endif ?>
 								</div>
 								<div class="uc_uib sel_id" data-id="<?=$buy_d['id']?>">
 									<div class="uc_uibo"><i class="fal fa-ellipsis-v"></i></div>
@@ -221,6 +222,13 @@
 			<? endif ?>
 
 		</div>
+	</div>
+
+	<div class="ucours_tm ucours_tm_btn dsp_n">
+		<button class="btn btn_cm add_user_btn">
+			<i class="fal fa-user-plus"></i>
+			<span>Оқушыны қосу</span>
+		</button>
 	</div>
 
 <? include "../../../block/footer.php"; ?>

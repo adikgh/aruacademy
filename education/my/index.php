@@ -10,9 +10,9 @@
 	
 	$sub_buy = db::query("select * from c_sub_buy where user_id = '$user_id' and off is null");
 
-	$buy = db::query("select * from c_buy where user_id = '$user_id' and off is null ORDER BY ins_dt DESC");
-	$buy_off = db::query("select * from c_buy where user_id = '$user_id' and off = 1 ORDER BY ins_dt DESC");
-	$item = db::query("select * from c_sub_item where sub_id = '$sub_id' order by number asc");
+	$buy = db::query("select * from c_buy where user_id = '$user_id' and cours_id is not null and off is null ORDER BY ins_dt DESC");
+	$buy_off = db::query("select * from c_buy where user_id = '$user_id' and cours_id is not null and off = 1 ORDER BY ins_dt DESC");
+	// $item = db::query("select * from c_sub_item where sub_id = '$sub_id' order by number asc");
 
 
 	// Сайттың баптаулары
@@ -56,7 +56,7 @@
 				<? if (mysqli_num_rows($buy)): ?>
 
 					<? while($buy_d = mysqli_fetch_array($buy)): ?>
-						<?	$cours_id = $buy_d['cours_id']; ?>
+						<? $cours_id = $buy_d['cours_id']; ?>
 						<? $cours_d = fun::cours($buy_d['cours_id']); ?>
 							
 						<? $open = true; $result = 0; $access = 0; $precent = 0; ?>
@@ -68,7 +68,7 @@
 						<? endif ?>
 
 						<div class="uc_di <?=(!$open||$buy_d['off']?'uc_di_lock':'')?>">
-							<a class="uc_dio" href="/education/my/item.php?id=<?=$cours_d['id']?>&cat=<?=$cours_d['category_id']?>">
+							<a class="uc_dio" href="/education/my/item.php?id=<?=$cours_d['id']?>&cat=<?=$cours_d['category_id']?>" data-id="<?=$buy_d['id']?>">
 								<div class="uc_di_img">
 									<div class="uc_di_imgc lazy_img" data-src="/assets/uploads/course/<?=$cours_d['img']?>"></div>
 									<div class="uc_dip">

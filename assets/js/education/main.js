@@ -60,6 +60,8 @@ $(document).ready(function() {
 
 
 
+
+
 	$('.btn_ubd_acc').click(function () { 
 		// form
 		this_btn = $(this)

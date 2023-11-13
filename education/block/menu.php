@@ -5,12 +5,14 @@
 				<a class="logo" href="/education/"><?=$site['name']?></a>
 				<div class="header_r">
 					<div class="cmenu">
-						<? if (!$user_right): ?> <a class="cmenu_i <?=($menu_name=='my'?'cmenu_i_act':'')?>" href="/education/my/">Менің курстарым</a>
+						<? if (!$user_right): ?>
+							<a class="cmenu_i <?=($menu_name=='my'?'cmenu_i_act':'')?>" href="/education/my/">Менің курстарым</a>
+							<a class="cmenu_i <?=($menu_name=='club'?'cmenu_i_act':'')?>" href="/education/club/">Клуб</a>
 						<? else: ?>
 							<a class="cmenu_i <?=($menu_name=='list'?'cmenu_i_act':'')?>" href="/education/my/list.php">Курстар</a>	
+							<a class="cmenu_i <?=($menu_name=='club'?'cmenu_i_act':'')?>" href="/education/club/admin/users/">Клуб</a>
 							<a class="cmenu_i <?=($menu_name=='users'?'cmenu_i_act':'')?>" href="/education/users/">Қолданушылар</a>
 						<? endif ?>
-						<!-- <a class="cmenu_i <?=($menu_name=='club'?'cmenu_i_act':'')?>" href="/education/club/">Клуб</a> -->
 						<!-- <a class="cmenu_i <?=($menu_name=='chat'?'cmenu_i_act':'')?>" href="/education/chat/">Чат</a> -->
 						<!-- <a class="cmenu_i <?=($menu_name==''?'cmenu_i_act':'')?>" href="/user/homework/">Үй жұмысы</a> -->
 						<!-- <a class="cmenu_i <?=($menu_name==''?'cmenu_i_act':'')?>" href="#"></a> -->
@@ -51,32 +53,40 @@
 	</div>
 <? endif ?>
 
-<? if ($user_right): ?>
-   <!-- <div class="pmenu">
+<? if ($user_right && @$site_set['menu_mb']): ?>
+   <div class="pmenu">
       <div class="pmenu_c">
 			<div class="pmenu_cm">
-				<a class="pmenu_i <?=($menu_name=='my'?'pmenu_i_act':'')?>" href="/education/my">
-					<i class="fal fa-graduation-cap"></i>
-					<span>Курстар</span>
+				<a class="pmenu_i <?=($menu_name=='list'?'pmenu_i_act':'')?>" href="/education/my/list.php">
+					<i class="far fa-graduation-cap"></i>
+					<span>курстар</span>
 				</a>
-				<a class="pmenu_i <?=($menu_name=='club'?'pmenu_i_act':'')?>" href="/education/club">
-					<i class="fal fa-users-class"></i>
-					<span>Клуб</span>
+				<a class="pmenu_i <?=($menu_name=='club'?'pmenu_i_act':'')?>" href="/education/club/admin/users/">
+					<i class="far fa-users-class"></i>
+					<span>клуб</span>
 				</a>
-				<a class="pmenu_i <?=($menu_name=='acc'?'pmenu_i_act':'')?>" href="/education/acc">
-					<i class="fal fa-user"></i>
-					<span><?=$user['name']?> <?=($user['surname']?substr($user['surname'],0,1).'.':'')?></span>
+				<div class="pmenu_i pmenu_ibtn">
+					<i class="far fa-plus"></i>
+				</div>
+				<a class="pmenu_i <?=($menu_name=='users'?'pmenu_i_act':'')?>" href="/education/users/">
+					<i class="far fa-users"></i>
+					<span>қыздар</span>
+				</a>
+				<a class="pmenu_i <?=($menu_name=='acc'?'pmenu_i_act':'')?>" href="/education/acc/">
+					<i class="far fa-user"></i>
+					<span>профиль</span>
+					<!-- <span><?=$user['name']?> <?=($user['surname']?substr($user['surname'],0,1).'.':'')?></span> -->
 				</a>
 			</div>
       </div>
-   </div> -->
+   </div>
 <? endif ?>
 
 <div class="app">
 
-	<? if ($site_set['header'] == true): ?>
+	<? if ($site_set['header']): ?>
 		<div class="uhead">
-			<? if ($site_set['utop_bk']): ?>
+			<? if (@$site_set['utop_bk']): ?>
 				<a class="uhead_lb clc_back" <?=($site_set['utop_bk']!=' '?'href="/education/'.$site_set['utop_bk'].'"':'')?>>
 					<i class="fal fa-long-arrow-left"></i>
 				</a>

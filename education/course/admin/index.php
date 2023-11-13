@@ -45,6 +45,7 @@
 	$menu_name = 'item';
 	$pod_menu_name = 'main';
 
+	$site_set['menu_mb'] = false;
 	$site_set['utop_nm'] = $cours_d['name_'.$lang];
 	$site_set['utop_bk'] = 'my/list.php';
 	if (isset($_GET['back'])) $site_set['utop_bk'] = $_GET['back'];

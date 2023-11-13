@@ -48,7 +48,7 @@ class fun {
 	public static function category_name($id, $l) {
 		$sql = db::query("select * from category where id = '$id'");
 		$sql = mysqli_fetch_array($sql);
-		return $sql['name_'.$l];
+		return @$sql['name_'.$l];
 	}
 	public static function category_cours($id) {
 		$sql = db::query("select * from cours where id = '$id'");
