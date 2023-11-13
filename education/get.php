@@ -519,7 +519,7 @@
 	// user edit
 	if(isset($_GET['user_name_edit'])) {
 		$name = strip_tags($_POST['name']);
-		$upd = db::query("UPDATE `user` SET `name`='$name' WHERE id = '$user_id'");
+		$upd = db::query("UPDATE `user` SET `name`='$name', `upd_dt` = '$datetime' WHERE id = '$user_id'");
 		echo "yes";
 		exit();
 	}
