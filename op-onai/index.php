@@ -43,7 +43,7 @@
             <div class="blo1qt">
                <div class="head_c txt_c">
                   <p>"Тұлға тәрбиелеу оп-оңай" <br> кітабының авторы</p>
-                  <h4>Ару Сағи</h4>
+                  <h3>Ару Сағи</h3>
                </div>
                <div class="blo4_c">
 
