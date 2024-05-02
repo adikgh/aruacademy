@@ -44,7 +44,7 @@
 				<? endif ?>
 
 				<div class="footer_b">
-					<div class="footer_bl">© <?=$site['name']?>, 2023</div>
+					<div class="footer_bl">© <?=$site['name']?>, 2024</div>
 					<div class="footer_br">
 						<a href="https://gprog.kz" target="_blank" class="gprog_bl">
 							<span>#gprog-та</span>

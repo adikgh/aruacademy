@@ -30,7 +30,7 @@
 	$page = 1; if (isset($_GET['page']) && $_GET['page'] && is_int(intval($_GET['page']))) $page = $_GET['page'];
 	$page_age = 50;
 	$page_all = ceil($page_result / $page_age);
-	if ($page > $page_all) $page = $page_all;
+	if ($page > $page_all && $page_all != 0) $page = $page_all;
 	$page_start = ($page - 1) * $page_age;
 	$number = $page_start;
 

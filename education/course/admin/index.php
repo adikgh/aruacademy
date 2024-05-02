@@ -52,7 +52,6 @@
 	$css = ['education/cours', 'education/item'];
 	$js = ['admin/cours'];
 
-
 ?>
 <? include "../../block/header.php"; ?>
 
@@ -240,14 +239,6 @@
 	</div>
 
 
-
-
-
-
-
-
-
-
 	<!-- course copy -->
 	<div class="pop_bl pop_bl2 cours_copy">
 		<div class="pop_bl_a cours_copy_back"></div>
@@ -284,13 +275,6 @@
 			</div>
 		</div>
 	</div>
-
-
-
-
-
-
-
 
 
 	<!-- block copy -->
@@ -333,92 +317,90 @@
 	
 
 
-		<!-- block add -->
-		<div class="pop_bl pop_bl2 block_add">
-			<div class="pop_bl_a block_add_back"></div>
-			<div class="pop_bl_c">
-				<div class="head_c txt_c">
-					<h5>Бөлім қосу</h5>
-					<div class="btn btn_dd2 block_add_back"><i class="fal fa-times"></i></div>
-				</div>
-				<div class="pop_bl_cl">
-					<div class="form_c">
-						<div class="form_im">
-							<div class="form_span">Бөлімнің атауы:</div>
-							<input type="text" class="form_txt block_name" placeholder="Атауын жазыңыз" data-lenght="2">
-							<i class="far fa-text form_icon"></i>
-						</div>
-
-						<div class="form_im form_im_toggle">
-							<div class="form_span">Информация жазу:</div>
-							<input type="checkbox" class="info_inp" data-val="" />
-							<div class="form_im_toggle_btn number1_clc"></div>
-						</div>
-						<div class="number1_block">
-							<div class="form_im">
-								<div class="form_span">Сабақ саны:</div>
-								<input type="tel" class="form_im_txt fr_number block_item" placeholder="12" data-lenght="1" />
-								<i class="fal fa-play form_icon"></i>
-							</div>
-							<div class="form_im">
-								<div class="form_span">Тапсырма саны:</div>
-								<input type="tel" class="form_im_txt fr_number block_assig" placeholder="3" data-lenght="1" />
-								<i class="fal fa-scroll-old form_icon"></i>
-							</div>
-						</div>
-
-						<div class="form_im form_im_bn">
-							<div class="btn btn_block_add" data-cours-id="<?=$course_id?>">
-								<span>Добавить</span>
-							</div>
-						</div>
-					</div>
-				</div>
+	<!-- block add -->
+	<div class="pop_bl pop_bl2 block_add">
+		<div class="pop_bl_a block_add_back"></div>
+		<div class="pop_bl_c">
+			<div class="head_c txt_c">
+				<h5>Бөлім қосу</h5>
+				<div class="btn btn_dd2 block_add_back"><i class="fal fa-times"></i></div>
 			</div>
-		</div>
-	
+			<div class="pop_bl_cl">
+				<div class="form_c">
+					<div class="form_im">
+						<div class="form_span">Бөлімнің атауы:</div>
+						<input type="text" class="form_txt block_name" placeholder="Атауын жазыңыз" data-lenght="2">
+						<i class="far fa-text form_icon"></i>
+					</div>
 
-
-
-
-	<!-- lesson add -->
-	<div class="pop_bl pop_bl2 lesson_add">
-			<div class="pop_bl_a lesson_add_back"></div>
-			<div class="pop_bl_c">
-				<div class="head_c txt_c">
-					<h5>Сабақ қосу</h5>
-					<div class="btn btn_dd2 lesson_add_back"><i class="fal fa-times"></i></div>
-				</div>
-				<div class="pop_bl_cl">
-					<div class="form_c">
+					<div class="form_im form_im_toggle">
+						<div class="form_span">Информация жазу:</div>
+						<input type="checkbox" class="info_inp" data-val="" />
+						<div class="form_im_toggle_btn number1_clc"></div>
+					</div>
+					<div class="number1_block">
 						<div class="form_im">
-							<div class="form_span">Сабақ атауы:</div>
-							<input type="text" class="form_txt lesson_name" placeholder="Атын жазыңыз" data-lenght="2">
-							<i class="far fa-text form_icon"></i>
-						</div>
-						<div class="form_im form_im_toggle">
-							<div class="form_span">Сабақты ашып қою:</div>
-							<input type="checkbox" class="lesson_open" data-val="1" />
-							<div class="form_im_toggle_btn form_im_toggle_act"></div>
-						</div>
-
-						<div class="form_im">
-							<div class="form_span">Видео: (Yotube)</div>
-							<input type="url" class="form_txt fr_youtube lesson_youtube" placeholder="Сілтемесін қойыңыз" data-lenght="1" />
+							<div class="form_span">Сабақ саны:</div>
+							<input type="tel" class="form_im_txt fr_number block_item" placeholder="12" data-lenght="1" />
 							<i class="fal fa-play form_icon"></i>
 						</div>
-						<!-- <div class="form_im">
-							<div class="form_span">Текст:</div>
-							<textarea type="text" class="form_im_comment_aut lesson_txt" rows="5" autocomplete="off" autocorrect="off" aria-label="Напишите текст .." placeholder="Мәтінді жазыңыз .." ></textarea>
-							<script>autosize(document.querySelectorAll('.form_im_comment_aut'));</script>
-						</div> -->
+						<div class="form_im">
+							<div class="form_span">Тапсырма саны:</div>
+							<input type="tel" class="form_im_txt fr_number block_assig" placeholder="3" data-lenght="1" />
+							<i class="fal fa-scroll-old form_icon"></i>
+						</div>
+					</div>
 
-						<div class="form_im form_im_bn">
-							<div class="btn btn_lesson_add" data-cours-id="<?=$cours_id?>" data-pack="<?=$pack_id?>">Қосу</div>
+					<div class="form_im form_im_bn">
+						<div class="btn btn_block_add" data-cours-id="<?=$course_id?>">
+							<span>Добавить</span>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
+	</div>
+	
+
+	
+	<!-- lesson add -->
+	<div class="pop_bl pop_bl2 lesson_add">
+		<div class="pop_bl_a lesson_add_back"></div>
+		<div class="pop_bl_c">
+			<div class="head_c txt_c">
+				<h5>Сабақ қосу</h5>
+				<div class="btn btn_dd2 lesson_add_back"><i class="fal fa-times"></i></div>
+			</div>
+			<div class="pop_bl_cl">
+				<div class="form_c">
+					<div class="form_im">
+						<div class="form_span">Сабақ атауы:</div>
+						<input type="text" class="form_txt lesson_name" placeholder="Атын жазыңыз" data-lenght="2">
+						<i class="far fa-text form_icon"></i>
+					</div>
+					<div class="form_im form_im_toggle">
+						<div class="form_span">Сабақты ашып қою:</div>
+						<input type="checkbox" class="lesson_open" data-val="1" />
+						<div class="form_im_toggle_btn form_im_toggle_act"></div>
+					</div>
+
+					<div class="form_im">
+						<div class="form_span">Видео: (Yotube)</div>
+						<input type="url" class="form_txt fr_youtube lesson_youtube" placeholder="Сілтемесін қойыңыз" data-lenght="1" />
+						<i class="fal fa-play form_icon"></i>
+					</div>
+					<!-- <div class="form_im">
+						<div class="form_span">Текст:</div>
+						<textarea type="text" class="form_im_comment_aut lesson_txt" rows="5" autocomplete="off" autocorrect="off" aria-label="Напишите текст .." placeholder="Мәтінді жазыңыз .." ></textarea>
+						<script>autosize(document.querySelectorAll('.form_im_comment_aut'));</script>
+					</div> -->
+
+					<div class="form_im form_im_bn">
+						<div class="btn btn_lesson_add" data-cours-id="<?=$cours_id?>" data-pack="<?=$pack_id?>">Қосу</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 
 
