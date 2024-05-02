@@ -57,7 +57,7 @@
                      </div> -->
                      <div class="blo4_t">
                         <div class="blo4_tc">
-                           <p>@aru.sagi</p>
+                           <p>@aru_sagi</p>
                         </div>
                      </div>
                   </div>
