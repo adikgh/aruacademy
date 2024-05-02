@@ -16,6 +16,29 @@ $(document).ready(function() {
 	});
 
 
+   $('.clc_uik').on('click', function(e) {
+		e.preventDefault();
+		if ($(this).hasClass('faq-act') == true) {
+			$(this).removeClass('faq-act')
+			// $(this).height($(this).children('.faq-ah').height())
+         $('.fg5_c2').addClass('dsp_n')
+		} else {
+			$(this).addClass('faq-act')
+			// $(this).height($(this).children('.faq-text').height() + $(this).children('.faq-ah').height() + 20)
+         $('.fg5_c2').removeClass('dsp_n')
+		}
+	});
+
+
+
+
+
+
+
+
+
+
+
 
    $('.blo8_ciqi').on('click', function(e) {
 		e.preventDefault();

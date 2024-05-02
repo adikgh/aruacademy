@@ -124,6 +124,28 @@ body{
 }
 
 
+
+/* btn text */
+.btn_back3{
+	background: var(--tr);
+	color: var(--bl);
+	border: none;
+	box-shadow: none;
+	padding: 0;
+	text-transform: unset;
+	text-decoration: underline;
+	font-size: 14px;
+	border: 0 !important;
+	box-shadow: none !important;
+}
+.btn_back3:hover{
+	color: var(--cl);
+	background: var(--tr);
+	border: 0 !important;
+	box-shadow: none !important;
+}
+
+
 /* .btn_cl{}
 .btn::after{
 	content: "";
@@ -383,6 +405,75 @@ h1{
 }
 .blo4_t .btn:hover{}
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*  */
+.fg5_c{
+	position: relative;
+	width: 100%;
+}
+.fg5_c1{
+	position: relative;
+	width: 100%;
+}
+.fg5_cl{
+	position: relative;
+	width: 100%;
+	margin-bottom: 10px;
+	display: flex;
+	align-items: stretch;
+	justify-content: space-between;
+}
+
+.fg5_cl div:last-child{
+	position: relative;
+	width: calc(100% - 64px - 10px);
+	font-size: 16px;
+	font-weight: 500;
+	background: #f5f5f5;
+	padding: 7px 15px;
+	min-height: 44px;
+	display: flex;
+	align-items: center;
+}
+.fg5_cl div:first-child{
+	position: relative;
+	width: 64px;
+	font-size: 16px;
+	font-weight: 500;
+	padding: 7px 15px;
+	min-height: 44px;
+	display: flex;
+	align-items: center;
+	text-align: center;
+	justify-content: center;
+	background: var(--cl);
+	color: var(--wh);
+}
+
+
+
+
+
+.fg5_c .btn{
+	width: 100%;
+}
 
 
 

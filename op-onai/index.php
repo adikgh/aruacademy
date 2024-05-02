@@ -163,7 +163,7 @@
                   <div class="bloq6_ilo"><i class="fas fa-check-square"></i></div>
                   <div class="bloq6_ilc">
                      <p>Кейін:</p>
-                     <div class="bloq6_ilb">Үй жұмысын оңай жасайды. қарсыласвп, қырсықсада онымен айқайсыз келіссөз жүргізе аласыз</div>
+                     <div class="bloq6_ilb">Үй жұмысын оңай жасайды. қарсыласып, қырсықсада онымен айқайсыз келіссөз жүргізе аласыз</div>
                   </div>
                </div>
             </div>
@@ -172,7 +172,7 @@
                   <div class="bloq6_ilo"><i class="fas fa-times-square"></i></div>
                   <div class="bloq6_ilc">
                      <p>Дейін:</p>
-                     <div class="bloq6_ilb">Айтқанды түсінбейді. Мың қақсатады. Арты айқайлап, ұсып тіпті ұруға да әкеледі</div>
+                     <div class="bloq6_ilb">Айтқанды түсінбейді. Мың қақсатады. Арты айқайлап, ұрсыып тіпті ұруға да әкеледі</div>
                   </div>
                </div>
                <div class="bloq6_ir">
@@ -247,6 +247,136 @@
                <a class="btn" href="#price">Маған курс қажет</a>
             </div> -->
 
+         </div>
+      </div>
+   </div>
+
+
+   <div class="">
+      <div class="bl_c">
+         <div class="head_c txt_c">
+            <h1>Мазмұны</h1>
+         </div>
+         <div class="fg5_c">
+            <div class="fg5_c1">
+               <div class="fg5_cl">
+                  <div class="">04</div>
+                  <div class="">Алғы сөз</div>
+               </div>
+               <div class="fg5_cl">
+                  <div class="">06</div>
+                  <div class="">Жауапкершілік</div>
+               </div>
+               <div class="fg5_cl">
+                  <div class="">09</div>
+                  <div class="">Балам үй тірлігіне көмектескісі келмейді</div>
+               </div>
+               <div class="fg5_cl">
+                  <div class="">13</div>
+                  <div class="">Баланы ұрмай, ұрыспай қалай жазалауға болады?</div>
+               </div>
+               <div class="fg5_cl">
+                  <div class="">16</div>
+                  <div class="">Жазаның түрлері</div>
+               </div>
+               <div class="fg5_cl">
+                  <div class="">19</div>
+                  <div class="">Жазаны қалай жүзеге асырамыз?</div>
+               </div>
+               <div class="fg5_cl">
+                  <div class="">23</div>
+                  <div class="">Мен ұрмаймын. Бірақ әкесі ұрса қайтемін?</div>
+               </div>
+               <div class="fg5_cl">
+                  <div class="">27</div>
+                  <div class="">Ақшаға жауапкершілік</div>
+               </div>
+               <div class="fg5_cl">
+                  <div class="">31</div>
+                  <div class="">Балаға ақшаны қалай береміз?</div>
+               </div>
+               <div class="fg5_cl">
+                  <div class="">33</div>
+                  <div class="">Шынайылық</div>
+               </div>
+               <div class="fg5_cl">
+                  <div class="">38</div>
+                  <div class="">Белсенді тыңдау</div>
+               </div>
+               <div class="fg5_cl">
+                  <div class="">41</div>
+                  <div class="">Тыныштыққа шыдау</div>
+               </div>
+               <div class="fg5_cl">
+                  <div class="">46</div>
+                  <div class="">Көзге тік қарау</div>
+               </div>
+            </div>
+            
+            <div class="btn btn_back3 clc_uik">Толық тізімді ашу</div>
+
+            <div class="fg5_c2 dsp_n">
+               <div class="fg5_cl">
+                  <div class="">58</div>
+                  <div class="">Айна әдісі </div>
+               </div>
+               <div class="fg5_cl">
+                  <div class="">62</div>
+                  <div class="">Мағынасын ашу әдісі</div>
+               </div>
+               <div class="fg5_cl">
+                  <div class="">75</div>
+                  <div class="">Бала не үшін өтірік айтады? </div>
+               </div>
+               <div class="fg5_cl">
+                  <div class="">87</div>
+                  <div class="">Мағынасын ашу әдісі </div>
+               </div>
+               <div class="fg5_cl">
+                  <div class="">92</div>
+                  <div class="">Шынайы қарым-қатынас қалаған ата-анаға ескерту</div>
+               </div>
+               <div class="fg5_cl">
+                  <div class="">97</div>
+                  <div class="">Әділдік</div>
+               </div>
+               <div class="fg5_cl">
+                  <div class="">110</div>
+                  <div class="">Ұрса ұр, соқса соқ!</div>
+               </div>
+               <div class="fg5_cl">
+                  <div class="">114</div>
+                  <div class="">Баламның досы болғым келеді</div>
+               </div>
+               <div class="fg5_cl">
+                  <div class="">117</div>
+                  <div class="">Балама қалай беделді болам?</div>
+               </div>
+               <div class="fg5_cl">
+                  <div class="">120</div>
+                  <div class="">Балама дос керек</div>
+               </div>
+               <div class="fg5_cl">
+                  <div class="">127</div>
+                  <div class="">Балам өзіне сенімсіз</div>
+               </div>
+               <div class="fg5_cl">
+                  <div class="">131</div>
+                  <div class="">Буллинг. Баламды ешкім шеттетпесе екен</div>
+               </div>
+               <div class="fg5_cl">
+                  <div class="">136</div>
+                  <div class="">Шеттетуге әкелетін ата-ана қателігі</div>
+               </div>
+               <div class="fg5_cl">
+                  <div class="">138</div>
+                  <div class="">Қорытынды</div>
+               </div>
+               <div class="fg5_cl">
+                  <div class="">146</div>
+                  <div class="">Суицид</div>
+               </div>
+            </div>
          </div>
       </div>
    </div>
