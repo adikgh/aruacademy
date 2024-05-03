@@ -467,7 +467,7 @@
       <div class="oko_a oko_close"></div>
       <div class="bl_c">
          <div class="oko_s">
-            <div class="oko_s_name">Төлем жасау үшін ТӨЛЕМ батырмасын басып, 5.000 тг <br>KASPI PAY-ға жібересіз жібересіз</div>
+            <div class="oko_s_name">Төлем жасау үшін ТӨЛЕМ батырмасын басып, 5.000 тг <br>KASPI PAY-ға жібересіз</div>
             <a href="https://pay.kaspi.kz/pay/ozyokgyl" target="_blank" class="btn">Төлем</a>
             <!-- <img class="lazy_img copy" onclick="copytext('4400430241301735')" data-src="/assets/img/card/aru kaspi 4.png" /> -->
             <!-- <div class="oko_s_s">Көшіріп алу үшін картаны басыңыз</div> -->
