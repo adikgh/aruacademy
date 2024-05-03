@@ -420,9 +420,9 @@
                      <div class="blo8_cipoi blo8_cipoi_mrf">5 000 тенге</div>
                   </div>
                   <div class="blo8_cip_btn">
-                     <!-- <div class="btn btn_ukl" data-price="10 000" data-price2="5 000">Төлем жасаймын</div> -->
+                     <div class="btn btn_ukl" data-price="10 000" data-price2="5 000">Кітапты алғым келеді</div>
                      <!-- <a class="btn btn_cl " href="<?=$what?>?text=<?=$wh_txt2?>" target="_blank">Бөліп төлеймін </a> -->
-                     <a class="btn " href="<?=$what?>?text=<?=$wh_txt2?>" target="_blank">Кітапты алғым келеді</a>
+                     <!-- <a class="btn " href="<?=$what?>?text=<?=$wh_txt2?>" target="_blank">Кітапты алғым келеді</a> -->
                   </div>
                </div>
             </div>
@@ -462,4 +462,17 @@
 
 
 <? include "../block/footer.php"; ?>
-   <? include "oko.php"; ?>
+  
+   <div class="oko">
+      <div class="oko_a oko_close"></div>
+      <div class="bl_c">
+         <div class="oko_s">
+            <div class="oko_s_name">Төлем жасау үшін ТӨЛЕМ батырмасын басып, 5.000 тг <br>KASPI PAY-ға жібересіз жібересіз</div>
+            <a href="https://pay.kaspi.kz/pay/ozyokgyl" target="_blank" class="btn">Төлем</a>
+            <!-- <img class="lazy_img copy" onclick="copytext('4400430241301735')" data-src="/assets/img/card/aru kaspi 4.png" /> -->
+            <!-- <div class="oko_s_s">Көшіріп алу үшін картаны басыңыз</div> -->
+            <div class="oko_s_p">Whatsapp желісіне <br>чек-ті жібересіз</div>
+            <a href="https://wa.me/<?=$whatsapp[$san]?>" target="_blank" class="btn btn_cl">Жіберемін</a>
+         </div>
+      </div>
+   </div>
