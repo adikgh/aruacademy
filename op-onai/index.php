@@ -259,122 +259,55 @@
          </div>
          <div class="fg5_c">
             <div class="fg5_c1">
-               <div class="fg5_cl">
-                  <div class="">04</div>
-                  <div class="">Алғы сөз</div>
+               <div class="blo5_cci">
+                  <div class="blo5_cciho2">1. Алғы сөз</div>
                </div>
-               <div class="fg5_cl">
-                  <div class="">06</div>
-                  <div class="">Жауапкершілік</div>
+               <div class="blo5_cci">
+                  <div class="blo5_ccih2">1-бөлім:</div>
+                  <div class="blo5_cciho2">Жауапкершілік</div>
+                  <ul class="blo5_ccl">
+                     <li>Балам үй тірлігіне көмектескісі келмейді</li>
+                     <li>Баланы ұрмай, ұрыспай қалай жазалауға болады?</li>
+                     <li>Жазаның түрлері</li>
+                     <li>Жазаны қалай жүзеге асырамыз?</li>
+                     <li>Мен ұрмаймын. Бірақ әкесі ұрса қайтемін?</li>
+                     <li>Ақшаға жауапкершілік</li>
+                     <li>Балаға ақшаны қалай береміз?</li>
+                  </ul>
                </div>
-               <div class="fg5_cl">
-                  <div class="">09</div>
-                  <div class="">Балам үй тірлігіне көмектескісі келмейді</div>
+               <div class="blo5_cci">
+                  <div class="blo5_ccih2">2-бөлім:</div>
+                  <div class="blo5_cciho2">Шынайылық</div>
+                  <ul class="blo5_ccl">
+                     <li>Уақытың болмаса балаға қалай көңіл бөлуге болады?</li>
+                     <li>Баламен қатынасты реттейтін әдістер</li>
+                     <li>Белсенді тыңдау әдісі</li>
+                     <li>Тыныштыққа шыдау әдісі</li>
+                     <li>Көзге тік қарау әдісі</li>
+                     <li>Айна әдісі </li>
+                     <li>Мағынасын ашу әдісі </li>
+                     <li>Өмірдегі қиын жағдай (ауыр дерт,ажырасу,өлім)туралы балама қалай айтам?</li>
+                     <li>Бала не үшін өтірік айтады? </li>
+                     <li>Балам ұрлық жасады</li>
+                     <li>Шынайы қарым-қатынас қалаған ата-анаға ескерту</li>
+                  </ul>
                </div>
-               <div class="fg5_cl">
-                  <div class="">13</div>
-                  <div class="">Баланы ұрмай, ұрыспай қалай жазалауға болады?</div>
-               </div>
-               <div class="fg5_cl">
-                  <div class="">16</div>
-                  <div class="">Жазаның түрлері</div>
-               </div>
-               <div class="fg5_cl">
-                  <div class="">19</div>
-                  <div class="">Жазаны қалай жүзеге асырамыз?</div>
-               </div>
-               <div class="fg5_cl">
-                  <div class="">23</div>
-                  <div class="">Мен ұрмаймын. Бірақ әкесі ұрса қайтемін?</div>
-               </div>
-               <div class="fg5_cl">
-                  <div class="">27</div>
-                  <div class="">Ақшаға жауапкершілік</div>
-               </div>
-               <div class="fg5_cl">
-                  <div class="">31</div>
-                  <div class="">Балаға ақшаны қалай береміз?</div>
-               </div>
-               <div class="fg5_cl">
-                  <div class="">33</div>
-                  <div class="">Шынайылық</div>
-               </div>
-               <div class="fg5_cl">
-                  <div class="">38</div>
-                  <div class="">Белсенді тыңдау</div>
-               </div>
-               <div class="fg5_cl">
-                  <div class="">41</div>
-                  <div class="">Тыныштыққа шыдау</div>
-               </div>
-               <div class="fg5_cl">
-                  <div class="">46</div>
-                  <div class="">Көзге тік қарау</div>
-               </div>
-            </div>
-            
-            <div class="btn btn_back3 clc_uik">Толық тізімді ашу</div>
-
-            <div class="fg5_c2 dsp_n">
-               <div class="fg5_cl">
-                  <div class="">58</div>
-                  <div class="">Айна әдісі </div>
-               </div>
-               <div class="fg5_cl">
-                  <div class="">62</div>
-                  <div class="">Мағынасын ашу әдісі</div>
-               </div>
-               <div class="fg5_cl">
-                  <div class="">75</div>
-                  <div class="">Бала не үшін өтірік айтады? </div>
-               </div>
-               <div class="fg5_cl">
-                  <div class="">87</div>
-                  <div class="">Мағынасын ашу әдісі </div>
-               </div>
-               <div class="fg5_cl">
-                  <div class="">92</div>
-                  <div class="">Шынайы қарым-қатынас қалаған ата-анаға ескерту</div>
-               </div>
-               <div class="fg5_cl">
-                  <div class="">97</div>
-                  <div class="">Әділдік</div>
-               </div>
-               <div class="fg5_cl">
-                  <div class="">110</div>
-                  <div class="">Ұрса ұр, соқса соқ!</div>
-               </div>
-               <div class="fg5_cl">
-                  <div class="">114</div>
-                  <div class="">Баламның досы болғым келеді</div>
-               </div>
-               <div class="fg5_cl">
-                  <div class="">117</div>
-                  <div class="">Балама қалай беделді болам?</div>
-               </div>
-               <div class="fg5_cl">
-                  <div class="">120</div>
-                  <div class="">Балама дос керек</div>
-               </div>
-               <div class="fg5_cl">
-                  <div class="">127</div>
-                  <div class="">Балам өзіне сенімсіз</div>
-               </div>
-               <div class="fg5_cl">
-                  <div class="">131</div>
-                  <div class="">Буллинг. Баламды ешкім шеттетпесе екен</div>
-               </div>
-               <div class="fg5_cl">
-                  <div class="">136</div>
-                  <div class="">Шеттетуге әкелетін ата-ана қателігі</div>
-               </div>
-               <div class="fg5_cl">
-                  <div class="">138</div>
-                  <div class="">Қорытынды</div>
-               </div>
-               <div class="fg5_cl">
-                  <div class="">146</div>
-                  <div class="">Суицид</div>
+               <div class="blo5_cci">
+                  <div class="blo5_ccih2">3-бөлім:</div>
+                  <div class="blo5_cciho2">Әділдік</div>
+                  <ul class="blo5_ccl">
+                     <li>Абайла, әділетсіздік! </li>
+                     <li>Ұрса ұр, соқса соқ! </li>
+                     <li>Баламның досы болғым келеді</li>
+                     <li>Балама қалай беделді (авторитет) болам? </li>
+                     <li>Бұзылған қатынасты қайта жақсартатын амалдар</li>
+                     <li>Балама дос керек</li>
+                     <li>Балам өзіне сенімсіз</li>
+                     <li>Оптимист бала тәрбиелеудің оңай жолдары қандай?</li>
+                     <li>Буллинг. Баламды ешкім шеттетпесе екен</li>
+                     <li>Шеттетуге әкелетін ата-ана қателігі</li>
+                     <li>Балалар арасындағы Суицид</li>
+                  </ul>
                </div>
             </div>
          </div>

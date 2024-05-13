@@ -481,6 +481,119 @@ h1{
 
 
 
+.blo5_cci{
+	position: relative;
+	width: 100%;
+	border: 1px solid var(--gr2);
+	padding: 15px 20px;
+	margin-bottom: 20px;
+	border-radius: 14px;
+}
+
+.blo5_ccih2{
+	position: relative;
+	width: auto;
+	display: inline-flex;
+	justify-content: flex-start;
+	align-items: center;
+	margin-right: 8px;
+	background: var(--cm2);
+	padding: 5px 10px;
+	border-radius: 7px;
+	
+	font-size: 12px;
+}
+
+
+.blo5_cciho2{
+	position: relative;
+	width: 100%;
+	font-size: 20px;
+	font-weight: 600;
+	color: var(--cm);
+	margin-top: 20px;
+	text-transform: uppercase;
+}
+.blo5_cciho2:first-child{
+	margin-top: 0;
+}
+
+
+.blo5_ccl{
+	position: relative;
+	width: 100%;
+	margin-top: 10px;
+	padding-left: 20px;
+}
+.blo5_ccl li{
+	position: relative;
+	width: 100%;
+	line-height: 22px;
+	font-size: 16px;
+	margin-bottom: 2px;
+	list-style: circle;
+}
+
+.blo5_ccy{
+	position: relative;
+	width: 100%;
+	margin-top: 20px;
+	background: var(--cm1);
+	padding: 15px 20px;
+	border-radius: 12px;
+}
+.blo5_ccy span{
+	position: relative;
+	width: 100%;
+	display: block;
+	margin-bottom: 8px;
+	font-size: 16px;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+.blo5_ccy p{
+	position: relative;
+	width: 100%;
+	font-size: 14px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
