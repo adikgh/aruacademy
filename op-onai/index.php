@@ -13,7 +13,7 @@
    // $site_set['footer'] = false;
    $css = ['project/ln', 'project/op-onai'];
    $js = ['project/ln'];
-
+   $site_set['cl_wh'] = false;
 
 
    $san = rand(0, 1);
